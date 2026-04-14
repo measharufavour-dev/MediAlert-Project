@@ -1,0 +1,211 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+  background: #f5f6f8;
+  color: #1e293b;
+  margin: auto;
+}
+
+/* NAVBAR */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 18px 80px;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.navbar .logo {
+  font-size: 20px;
+  font-weight: 600;
+  color: #023f7d;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.logo-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  gap: 0.5rem;
+}
+
+.nav-links a {
+  margin: 0 14px;
+  text-decoration: none;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.nav-links a:hover {
+  color: #023f7d;
+}
+
+.auth {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.login {
+  text-decoration: none;
+  color: #374151;
+  font-size: 14px;
+}
+
+.btn {
+  background: #023f7d;
+  color: #e5e7eb;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+}
+/* --------------------END OF NAVBAR----------/*
+
+/*-------------------- Header Section--------- */
+.header {
+  margin: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+
+.hero-text {
+  padding: 1rem;
+}
+.hero-text h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #023f7d;
+}
+.hero-text p {
+  color: #4d4a48;
+}
+button {
+  display: flex;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 15rem;
+  border-radius: 2rem;
+  border: 2px solid #dfdede;
+}
+button span {
+  color: #8a8887;
+}
+/* --------------END OF HERO SECTION */
+
+/* -----------HERO BLOG-------- */
+.blog {
+  margin: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+}
+.blog .text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.text .highlight {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+.highlight h3 {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #023f7d;
+}
+.text .main-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.main-text h2 {
+  width: 25vw;
+  font-size: 1.7rem;
+  line-height: 1.2;
+}
+.main-text p {
+  width: 30vw;
+  color: gray;
+  line-height: 1.8;
+}
+/* -----------END OF HERO BLOG ----------- */
+
+.card-containers {
+  margin: 4rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 0.8rem;
+}
+
+.blog .card-1 {
+  display: flex;
+  flex-direction: column;
+}
+.card {
+  margin-top: 1rem;
+  padding: 0.2rem;
+}
+.card-txt {
+  padding-left: 0;
+  margin-bottom: 1rem;
+}
+.card-txt h2 {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+.card h3 {
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+.card-txt p {
+  width: 23vw;
+  line-height: 2;
+}
+/* --------------------------RESPONSIVENESSS------------------------- */
+/* --- GLOBAL FIXES --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+img {
+  max-width: 100%; /* Prevents images from breaking layout */
+  height: auto;
+}
+
+/* --- NAVBAR RESPONSIVENESS --- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 5%; /* Use % instead of px for flexible sides */
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}

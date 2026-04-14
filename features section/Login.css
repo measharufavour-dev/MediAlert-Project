@@ -1,0 +1,160 @@
+/*  */
+  .registration-container-2, .login-2sec, .verification-container{
+  display: flex;
+  flex-direction:column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  
+}
+
+
+/* --- Login Specific Styles --- */
+
+.password-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.password-wrapper input {
+  padding-right: 2.5rem; /* Space for the eye icon */
+}
+
+.toggle-icon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #6B7280;
+  font-size: 0.9rem;
+}
+
+.forgot-password {
+  display: block;
+  font-size: 0.75rem;
+  color: #023F7D;
+  text-align: right;
+  margin-top: 0.5rem;
+  font-weight: 600;
+}
+
+.login-footer {
+  text-align: center;
+  font-size: 0.85rem;
+  margin-top: 1.5rem;
+  color: #6B7280;
+}
+
+.login-footer a {
+  color: #023F7D;
+  font-weight: 700;
+}
+
+/* --- Verification (OTP) Styles --- */
+.otp-input-group {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.otp-box {
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  border: 2px solid #E5E7EB;
+  border-radius: 12px;
+  color: #023F7D;
+  transition: border-color 0.3s;
+}
+
+.otp-box:focus {
+  border-color: #023F7D;
+  outline: none;
+}
+
+.resend-text {
+  text-align: center;
+  font-size: 0.85rem;
+  margin-top: 1rem;
+  color: #6B7280;
+}
+
+.resend-text a {
+  color: #023F7D;
+  font-weight: 700;
+}
+
+/* --- Section Container Cleanup --- */
+.login-2sec, .verification-container {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+/* Ensure the Login matches the Registration Layout */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  min-height: 100vh;
+}
+/* --- RESPONSIVE MOBILE FIXES --- */
+@media (max-width: 768px) {
+  /* 1. Stack everything vertically */
+  .registration-container, 
+  .registration-container-2, 
+  .login-container {
+    flex-direction: column !important;
+    padding: 1.5rem;
+    gap: 2rem;
+  }
+
+  /* 2. Hide the side illustration on small mobile to save space */
+ 
+  /* 3. Make form elements fill the screen width */
+  .form-section, 
+  #signup-form, 
+  #login-form,
+  .input-group input, 
+  .btn-primary, 
+  .upload-container,
+  .password-wrapper {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* 4. Fix the Phone Input layout for small screens */
+  .phone-input {
+    display: flex;
+    width: 100%;
+    gap: 0.5rem;
+  }
+
+  .country-code {
+    width: 25% !important;
+    justify-content: center;
+  }
+
+  #phone {
+    width: 72% !important;
+  }
+
+  /* 5. Adjust OTP boxes so they don't overflow on tiny screens */
+  .otp-input-group {
+    gap: 0.5rem;
+  }
+
+  .otp-box {
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+  }
+
+  /* 6. Typography adjustments */
+  .heading-text {
+    font-size: 1.3rem;
+  }
+}
+

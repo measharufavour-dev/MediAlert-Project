@@ -1,0 +1,114 @@
+
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediAlert - Forgot Password</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Logo Section -->
+        <div class="header">
+            <img src="asset/icon.png" alt="MediAlert Logo" class="logo">
+            <h2>MediAlert</h2>
+        </div>
+
+        <div class="card">
+            <!-- Success Message (Hidden by default) -->
+            <div class="alert-box" id="successAlert">
+                Check your email box to reset your password. To verify your email visit: 
+                <a href="#">support@medialert-app.com</a>
+            </div>
+
+            <h1>Forgot password?</h1>
+            <p class="subtitle">Don't worry, reset your password and we'll send you a link to your email address.</p>
+
+            <form id="forgotPasswordForm">
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" placeholder="medialert@gmail.com" required>
+                </div>
+
+                <button type="submit" class="btn-primary">Send Email</button>
+            </form>
+
+            <div class="footer-links">
+                <a href="#" class="back-link">Back to login</a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Script to toggle the success state for demonstration -->
+    <script>
+        document.getElementById('forgotPasswordForm').onsubmit = (e) => {
+            e.preventDefault();
+            document.getElementById('successAlert').style.display = 'block';
+        };
+    </script>
+
+<!-- ////////////////////////////////////////////////////////////////////////////// -->
+ <div class="app-container">
+        <!-- Logo Header -->
+        <div class="header">
+            <img src="asset/icon.png" alt="MediAlert Logo" class="logo">
+            <h2>MediAlert</h2>
+        </div>
+
+        <div class="content-wrapper">
+            
+            <!-- SECTION 1: CREATE NEW PASSWORD -->
+            <section id="createNewPassword" class="screen">
+                <h1>Create a new, secure password</h1>
+                <form>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <div class="input-wrapper">
+                            <input type="password" placeholder="••••••••" required>
+                            <!-- <span class="eye-icon">👁️</span> -->
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Confirm Password</label>
+                        <div class="input-wrapper">
+                            <input type="password" placeholder="••••••••" required>
+                            <!-- <span class="eye-icon">👁️</span> -->
+                        </div>
+                    </div>
+                    <button type="button" class="btn-primary" onclick="showScreen('successState')">Save</button>
+                </form>
+            </section>
+
+            <!-- SECTION 2: SUCCESS STATE -->
+             <!-- I will give this section a display of none. -->
+            <section id="successState" class="screen">    
+                <div class="success-content">
+                    <div class="success-icon-circle">
+
+                        <div class="check-icon">
+                            <img src="asset/success_shield-check.png" alt=""></div> 
+                    </div>
+                    <h1>Password reset successful</h1>
+                    <p class="subtitle">Log in with your new password to continue.</p>
+                    <button class="btn-primary">Login with new password</button>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <script>
+        function showScreen(screenId) {
+            document.querySelectorAll('.screen').forEach(s => s.style.display = 'none');
+            document.getElementById(screenId).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
+
+
+</body>
+</html>

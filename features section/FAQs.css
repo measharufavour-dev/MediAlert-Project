@@ -1,0 +1,242 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: rgb(248, 248, 248);
+}
+/* ------------------NAVBAR ------------------ */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 18px 80px;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.navbar .logo {
+  font-size: 20px;
+  font-weight: 600;
+  color: #023f7d;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.logo-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  gap: 0.5rem;
+}
+
+.nav-links a {
+  margin: 0 14px;
+  text-decoration: none;
+  color: #6b7280;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: #023f7d;
+}
+
+.auth {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.login {
+  text-decoration: none;
+  color: #374151;
+  font-size: 14px;
+}
+
+.btn {
+  background: #023f7d;
+  color: #e5e7eb;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+}
+/* -------------END OF NAVBAR-------------- */
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem;
+}
+.hero-text h1 {
+  padding: 1rem;
+  font-weight: 900;
+}
+.hero-text .highlight {
+  color: rgb(2, 63, 125);
+}
+.hero-text p {
+  text-align: center;
+  font-size: 1rem;
+  color: gray;
+}
+/* --------------Questions----------------- */
+.questions {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  margin: 3rem;
+  gap: 2rem;
+}
+
+.questions .faq-row {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+
+.action {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem;
+}
+.action .btn-primary {
+  background-color: rgb(2, 63, 125);
+  width: 25vw;
+  padding: 1rem;
+  border-radius: 10px;
+  color: white;
+  border: none;
+  margin: 1rem;
+  margin-bottom: 3rem;
+}
+/* ---------------------------------Mobile Views ---------------------------------- */
+/* Mobile View (Phones) */
+@media screen and (max-width: 768px) {
+  .hero-text,
+  .questions,
+  .action {
+    margin: 1.5rem 1rem;
+  }
+
+  .hero-text h1 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .questions .faq-row {
+    flex-direction: row;
+    gap: 0.8rem;
+    padding: 1rem;
+  }
+
+  .action .btn-primary {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+/* Extra Small Devices (Portrait Phones) */
+@media screen and (max-width: 480px) {
+  .hero-text p {
+    font-size: 0.9rem;
+  }
+}
+
+/* ----------------Footer Section---------------- */
+.footer {
+  margin: 4rem;
+}
+.hero-commet {
+  padding-bottom: 6rem;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.425);
+  margin-bottom: 6rem;
+}
+.icon {
+  display: flex;
+  margin-bottom: 0.5rem;
+  gap: 0.5rem;
+  justify-content: flex-start;
+  align-items: center;
+}
+.icon h2 {
+  color: rgb(2, 63, 125);
+}
+/* .............links */
+
+.links {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  margin-bottom: 3rem;
+  margin-top: 2rem;
+}
+
+.first,
+.second,
+.third,
+.fourth {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.first,
+.second,
+.third,
+.fourth h4 {
+  color: #4d4a48;
+}
+.links ul li {
+  list-style-type: none;
+  margin-bottom: 1.3rem;
+  color: gray;
+  font-weight: 500;
+}
+.fourth h4,
+p {
+  color: #4d4a48;
+}
+.fourth input {
+  padding: 1rem;
+  border: none;
+  border-radius: 2px;
+  box-shadow: 2px 1px 1px rgba(128, 128, 128, 0.499);
+}
+.fourth button {
+  width: 10vw;
+  border: none;
+  border-radius: 5px;
+  padding: 0.4rem;
+  background-color: #023f7d;
+  color: white;
+}
+/* ......................footnotes */
+.footnotes {
+  display: flex;
+  justify-content: space-between;
+}
+.text p {
+  color: #4d4a48;
+}
+.links-social ul {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  gap: 1rem;
+  align-self: center;
+}

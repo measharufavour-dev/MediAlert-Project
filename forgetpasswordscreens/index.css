@@ -1,0 +1,162 @@
+:root {
+  --primary-blue: #023f7d; /* my figma colours */
+  --text-dark: #1e1e1e;
+  --text-muted: #666666;
+  --bg-light: #f9f9f9;
+  --border-color: #e0e0e0;
+  --alert-bg: #b3d0ec;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background-color: white;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.header {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+.header h2 {
+  color: var(--primary-blue);
+}
+.container {
+  width: 100%;
+  max-width: 450px;
+  padding: 20px;
+}
+
+.header {
+  margin-bottom: 40px;
+}
+
+.logo {
+  height: 24px;
+}
+
+/* Alert Box */
+.alert-box {
+  display: none; /* Hidden state */
+  background-color: var(--alert-bg);
+  border-radius: 8px;
+  padding: 16px;
+  font-size: 14px;
+  color: var(--text-dark);
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+
+.alert-box a {
+  color: var(--primary-blue);
+  text-decoration: underline;
+}
+
+/* Typography */
+h1 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 12px;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-bottom: 32px;
+  line-height: 1;
+}
+
+/* Form Styles */
+.form-group {
+  margin-bottom: 24px;
+}
+
+label {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.btn-primary {
+  width: 100%;
+  background-color: var(--primary-blue);
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+.footer-links {
+  text-align: center;
+  margin-top: 24px;
+}
+
+.back-link {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+.app-container {
+  margin-top: 3rem;
+}
+/* .eye-icon {
+    position: absolute;
+ left: 80;
+    cursor: pointer;
+    opacity: 0.5;
+} */
+
+/* ----------------------- THE SUCCESS STATES---------------------------  */
+#successState{
+  display: none;
+}
+.success-content {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.success-icon-circle {
+  width: 50px;
+  height: 50px;
+  background-color: #eef7ff;
+  padding: 2.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem auto;
+}

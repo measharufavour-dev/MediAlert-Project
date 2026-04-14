@@ -1,0 +1,203 @@
+/* --- Landing Page Base (Global Stylings) --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+  background: #f5f6f8;
+  color: #1e293b;
+  margin: auto;
+}
+
+/*----------------- NAVBAR--------------- */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 18px 80px;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.navbar .logo {
+  font-size: 20px;
+  font-weight: 600;
+  color: #023f7d;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.logo-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  gap: 0.5rem;
+}
+
+.nav-links a {
+  margin: 0 14px;
+  text-decoration: none;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.nav-links a:hover {
+  color: #023f7d;
+}
+
+.auth {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.login {
+  text-decoration: none;
+  color: #374151;
+  font-size: 14px;
+}
+
+.btn {
+  background: #023f7d;
+  color: #e5e7eb;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+}
+/* --------------------END OF NAVBAR----------/*
+
+
+/* ----------------HERO SECTION------------------- */
+.header {
+  margin: 4rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.header .hero-text {
+  text-align: center;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.header .hero-text h1 {
+  font-size: 3rem;
+  width: 50vw;
+  color: #023f7d;
+  line-height: 1;
+}
+
+.header .hero-text p {
+  width: 50vw;
+  color: gray;
+  font-weight: 600;
+}
+
+.btn-action button {
+  width: 15vw;
+  border: none;
+  border-radius: 10px;
+  background-color: #023f7d;
+  padding: 0.5rem;
+  color: #e5e7eb;
+}
+/*  ----------END */
+/* Section Page */
+.box {
+  margin: 4rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* column-gap: 1rem; */
+  row-gap: 1rem;
+}
+.items {
+  width: 38vw;
+  background-color: white;
+  text-align: center;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.2rem;
+  border-radius: 20px;
+  padding-bottom: 3rem;
+}
+.items p {
+  font-size: 0.8rem;
+  width: 36vw;
+}
+.items-two {
+  width: 38vw;
+  padding: 1.2rem;
+  display: flex;
+  gap: 10rem;
+  flex-direction: row;
+  background-color: white;
+  border-radius: 20px;
+  padding-bottom: 3rem;
+  position: relative;
+}
+
+.vector-graphic {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: stretch;
+  align-items: stretch;
+}
+.vector-graphic img {
+  height: 260px;
+}
+.high {
+  display: flex;
+  flex-direction: column;
+  padding-top: 6rem;
+}
+.high h2 {
+  font-size: 2.5rem;
+}
+.high h2 span {
+  font-size: 2rem;
+  color: #023f7d;
+}
+.high p {
+  font-size: 14px;
+}
+.items-three {
+  width: 38vw;
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+.items-3-text{
+   display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: left;
+}
+.items-3-text p {
+  font-size: 14px;
+  width: 25vw;
+  padding: 1rem;
+  
+}

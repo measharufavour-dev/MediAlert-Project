@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="sign-up.css" />
+    <link rel="stylesheet" href="Login.css">
+    <title>MediAlert</title>
+  </head>
+  <body>
+    <!-------------------------- Sign-up Section -------------------------- -->
+    <div class="registration-container">
+      <!-- Left Section: The Form -->
+      <section class="form-section">
+        <header>
+          <div class="icon-section">
+            <img src="signup assests/icon.png" alt="MediAlert Logo" width="25px" />
+            <h3>MediAlert</h3>
+          </div>
+          <h1 class="heading-text">Hospital's Basic Info</h1>
+          <p class="subtitle">Register your hospital</p>
+        </header>
+
+        <form id="signup-form">
+          <div class="input-group">
+            <label for="hospital-name">Hospital's Full Name</label><br />
+            <input
+              type="text"
+              id="hospital-name"
+              placeholder="University Of Benin Teaching Hospital"
+            />
+          </div>
+
+          <div class="input-group">
+            <label for="email">Official Email</label>
+            <br />
+            <input
+              type="email"
+              id="email"
+              placeholder="MediAlert1@@gmail.com"
+            />
+          </div>
+
+          <div class="input-group">
+            <label for="phone">Phone Number</label><br />
+            <div class="phone-input">
+              <span class="country-code"> +234</span>
+              <input type="tel" id="phone" placeholder="Phone Number" />
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label for="password">Password</label> <br />
+            <input type="password" id="password" placeholder="••••••••" />
+            <i class="fa-solid fa-eye" id="togglePassword"></i>
+          </div>
+
+          <div class="input-group">
+            <label for="confirm-password">Confirm Password</label><br />
+            <input
+              type="password"
+              id="confirm-password"
+              placeholder="••••••••"
+            />
+          </div>
+          <p class="login">Already has an account? <a href="#">Log In</a></p>
+
+          <button type="submit" class="btn-primary">Next</button>
+        </form>
+
+        <footer></footer>
+      </section>
+
+      <!-- Right Section: The Illustration -->
+      <section class="image-section">
+        <img
+          src="signup assests/Onboarding image 1.png"
+          alt="Hospital ambulance illustration"
+          width="500px"
+        />
+      </section>
+    </div>
+    <!--  --------------------- login Section------------------------ -->
+    <div class="registration-container-2">
+      <!-- Left Side: The Form -->
+      <section class="form-section-2">
+        <header>
+          <div class="icon-section">
+            <img src="signup assests/icon.png" alt="MediAlert Logo" width="25px" />
+            <h3>MediAlert</h3>
+          </div>
+
+          <p class="subtitle">Register your hospital</p>
+          <h1 class="heading-text">Hospital's Details</h1>
+        </header>
+
+        <form id="signup-form">
+          <div class="input-group">
+            <label for="hospital-name">Hospital's Full Name</label><br />
+            <input
+              type="text"
+              id="hospital-name"
+              placeholder="University Of Benin Teaching Hospital"
+            />
+          </div>
+
+          <div class="input-group">
+            <label for="hospital-name">Map pin</label><br />
+            <input
+              type="text"
+              id="hospital-name"
+              placeholder="Pin Location"
+            />
+          </div>
+          <div class="map-pin-section">
+                   <div class="input-group">
+            <label for="hospital-name">Number of Ambulance</label><br />
+            <input
+              type="text"
+              id="hospital-name"
+              placeholder="100 Ambulance"
+            />
+          </div>
+          <div class="input-group">
+            <label for="hospital-name">Emergency Bed's Available</label><br />
+            <input
+              type="text"
+              id="hospital-name"
+              placeholder="250 Emergency Beds"
+            />
+          </div>
+          </div>
+          </form>
+<!-----------------Download Section--------------------- -->
+         
+<h4>Hospital Verification</h4>
+<div class="upload-container">
+      
+         
+    <div class="cloud-icon">
+        <div>
+        <img src=" signup assests/download-icon.png" alt="">
+    </div>
+</div> 
+<div class="text"> <h3>Upload Hospital's License</h3>
+    <p>PDF, JPG, or PNG (Must not be more than 1MB)</p></div> 
+   
+</div>
+  <!-------------------- terms and conditions -->
+        <p class="terms">By signing up, you agree to our <a href="#">Terms of Service</a> and <a href="#">Privacy Policies.</a></p>
+       
+
+          <button type="submit" class="btn-primary">Sign Up</button>
+           <p class="login-2">Already has an account? <a href="#">Log In</a></p>
+           <!------------------------------- image------------------------------- -->
+<section class="image-section">
+        <img
+          src=" signup assests/Onboarding image 1.png"
+          alt="Hospital ambulance illustration"
+          width="500px"
+        />
+      
+      </section>
+</section>
+
+
+
+
+
+       
+
+      <!-- --------------------- Login Section ------------------------ -->
+       <section class="login-2sec"> 
+<div class="registration-container login-container" id="login-section">
+  <section class="form-section">
+    <header>
+      <div class="icon-section">
+        <img src=" signup assests/icon.png" alt="MediAlert Logo" width="25px" />
+        <h3>MediAlert</h3>
+      </div>
+      <h1 class="heading-text">Welcome Back!</h1>
+      <p class="subtitle">Login to manage your hospital</p>
+    </header>
+
+    <form id="login-form">
+      <div class="input-group">
+        <label for="login-email">Official Email</label><br />
+        <input type="email" id="login-email" placeholder="MediAlert1@gmail.com" required />
+      </div>
+
+      <div class="input-group">
+        <label for="login-password">Password</label><br />
+        <div class="password-wrapper">
+          <input type="password" id="login-password" placeholder="••••••••" required />
+          <i class="fa-solid fa-eye-slash toggle-icon" id="toggleLoginPassword"></i>
+        </div>
+        <a href="#" class="forgot-password">Forgot Password?</a>
+      </div>
+
+      <button type="submit" class="btn-primary">Login</button>
+      <p class="login-footer">Don't have an account? <a href="#" id="show-signup">Sign Up</a></p>
+    </form>
+  </section>
+
+  <section class="image-section">
+    <img src=" signup assests/Onboarding image 1.png" alt="Hospital ambulance illustration" width="500px" />
+  </section>
+  </section>
+
+
+  <!-- --------------------- Verification Section ------------------------ -->
+   <section class="verification-container">
+<div class="registration-container verification-container hidden" id="otp-section">
+  <section class="form-section">
+    <header>
+      <div class="icon-section">
+        <img src=" signup assests/icon.png" alt="MediAlert Logo" width="25px" />
+        <h3>MediAlert</h3>
+      </div>
+      <h1 class="heading-text">Verify Email</h1>
+      <p class="subtitle">Enter the 4-digit code sent to your email</p>
+    </header>
+
+    <div class="otp-input-group">
+      <input type="text" maxlength="1" class="otp-box" />
+      <input type="text" maxlength="1" class="otp-box" />
+      <input type="text" maxlength="1" class="otp-box" />
+      <input type="text" maxlength="1" class="otp-box" />
+    </div>
+
+    <button class="btn-primary">Verify & Proceed</button>
+    <p class="resend-text">Didn't receive code? <a href="#">Resend Code</a></p>
+  </section>
+</div>
+
+
+
+     
+</div>
+</section>
+
+      
+
+
+
+
+
+    <script src="sign.up.js"></script>
+  </body>
+</html>

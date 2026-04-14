@@ -1,0 +1,336 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: white;
+  margin: 0.5rem auto;
+}
+.icon-section {
+  display: flex;
+  color: rgb(2, 63, 125);
+  margin-bottom: 2rem;
+}
+.registration-container {
+  display: flex;
+  gap: 4rem;
+  margin: 0.5rem auto;
+}
+
+/*   Left section : The Form   */
+.form-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* header */
+.subtitle {
+  font-weight: 700;
+  color: gray;
+}
+
+.heading-text {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+
+/* end of header */
+
+/*  sign-up form */
+#signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+.input-group label {
+  font-size: 0.6rem;
+  padding: 0.1rem;
+}
+.input-group input {
+  width: 35vw;
+  padding: 0.6rem;
+  font-size: 0.5rem;
+  font-weight: 500;
+  border: 2px solid rgba(137, 136, 136, 0.281);
+  border-radius: 5px;
+}
+
+input::placeholder {
+  color: rgba(128, 128, 128, 0.701);
+}
+.country-code {
+  width: 5vw;
+  padding: 0.4rem;
+  font-size: 0.5rem;
+  border: 2px solid rgba(137, 136, 136, 0.281);
+  border-radius: 5px;
+  color: gray;
+  display: flex;
+  justify-content: left;
+  align-content: left;
+}
+.input-group #phone {
+  width: 29.2vw;
+}
+.input-group .phone-input {
+  display: flex;
+  gap: 0.5rem;
+}
+.btn-primary {
+  background-color: rgb(2, 63, 125);
+  width: 35vw;
+  padding: 0.5rem;
+  border-radius: 5px;
+  color: white;
+  border: none;
+  margin: 1rem;
+}
+.login {
+  padding: 0.2rem;
+  margin-bottom: 1rem;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+/* Mobile Views */
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .registration-container {
+    flex-direction: column; /* Stacks the form and any side content vertically */
+    margin: 1.5rem; /* Reduces large desktop margins */
+    gap: 2rem;
+  }
+
+  .form-section {
+    width: 100%; /* Form takes up full width on mobile */
+  }
+
+  .input-group input {
+    width: 100%; /* Replaces your 28vw with full width */
+    font-size: 1rem; /* Makes text easier to read and prevents iOS auto-zoom */
+    padding: 0.8rem; /* Larger tap area for fingers */
+  }
+
+  .input-group .phone-input {
+    width: 100%;
+  }
+
+  .country-code {
+    width: 20%; /* Percentage works better than vw on mobile */
+    font-size: 1rem;
+  }
+
+  .input-group #phone {
+    width: 75%; /* Adjusts phone input to fit next to code */
+  }
+
+  .btn-primary {
+    width: 100%; /* Full-width buttons are standard for mobile UX */
+    padding: 1rem;
+    font-size: 1rem;
+  }
+}
+/* ------------------------------------NEXT SECTION OF SIGN UP PAGE HOSPITAL VERIFICATION-------------------------- */
+.registration-container-2 {
+  display: flex;
+  flex-direction: row;
+  gap: 4rem;
+  margin: 3rem;
+}
+.map-pin-section {
+  display: flex;
+  gap: 0.7rem;
+}
+
+.map-pin-section .input-group input {
+  width: 17vw;
+}
+/* ---------------downlaod section-------------- */
+h4 {
+  margin-top: 3rem;
+  font-size: 1rem;
+  padding: 0.5rem;
+  font-weight: 200;
+}
+.upload-container {
+  width: 35vw;
+  height: 28vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding-top: 1rem;
+  border: 2px dashed rgb(2, 63, 125);
+  border-radius: 5px;
+  gap: 0.5rem;
+}
+
+.cloud-icon {
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px dashed rgba(2, 56, 110, 0.435);
+  border-radius: 50%;
+}
+.cloud-icon div {
+  width: 30px;
+  height: 30px;
+  background-color: #bdd8f1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px dashed rgb(2, 63, 125);
+  border-radius: 50%;
+}
+
+.upload-container .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.text p {
+  color: rgba(128, 128, 128, 0.701);
+  padding: 0.5rem;
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+}
+.text h3 {
+  font-size: 1rem;
+}
+.terms {
+  padding: 0.5rem;
+  margin: 0.5rem;
+  font-size: 0.8rem;
+  text-align: center;
+}
+/*login-text */
+.login-2 {
+  padding: 1.2rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+/* my links general styles */
+a {
+  text-decoration: none;
+}
+
+
+
+
+
+/*-------------------------------- RESPONSIZE MOBILE VIEWS------------------------------- */
+
+/* --- 1. CLEANUP BASE STYLES --- */
+.registration-container,
+.registration-container-2 {
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-start;
+  margin: 0.5rem auto; 
+  padding: 2rem 1.5rem; 
+  max-width: 1200px; 
+  width: 100%;
+}
+
+.form-section {
+  width: 100%;
+  max-width: 450px; 
+}
+
+/* Remove fixed vw widths to let padding control the left margin */
+.input-group input,
+.btn-primary,
+.upload-container {
+  width: 100% !important;
+  max-width: 450px;
+}
+
+/* --- 2. SPECIFIC BREAKPOINTS --- */
+
+/* iPhones & Small Mobiles (Up to 480px) */
+@media (max-width: 480px) {
+  .registration-container,
+  .registration-container-2 {
+    padding: 1.5rem 1rem; /* Smaller gutters for small screens */
+  }
+
+  .input-group .phone-input {
+    display: flex;
+    width: 100%;
+  }
+
+  .country-code {
+    width: 25% !important;
+  }
+
+  #phone {
+    width: 72% !important;
+  }
+}
+
+/* Tablets (768px and up) */
+@media (min-width: 768px) {
+  .registration-container,
+  .registration-container-2 {
+    flex-direction: row; /* Side-by-side layout for desktop/tablet */
+    gap: 4rem;
+    padding: 3rem 2rem;
+  }
+
+  /* If you have a right-side image or text, it will now sit on the right */
+  .map-pin-section {
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .map-pin-section .input-group input {
+    width: 215px !important; /* Fixed size for side-by-side inputs on desktop */
+  }
+}
+
+/* Large Desktops (1200px +) */
+@media (min-width: 1200px) {
+  .registration-container {
+    padding: 4rem 0; /* No side padding needed because max-width & margin:auto handles it */
+  }
+}
+
+/* iPhone Safe Area Fix (Landscape) */
+@media only screen and (max-height: 480px) and (orientation: landscape) {
+  .registration-container {
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+  }
+}
+
+
+
+/* -======================================= */
+@media (max-width: 768px) {
+  /* This kills the bug where the image pushes the form or stacks on top */
+  .image-section img {
+    display: 200px;
+    text-align: center;
+  }
+
+  /* Ensure the container only focuses on the form now */
+  .registration-container, 
+  .registration-container-2, 
+  .login-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+}
