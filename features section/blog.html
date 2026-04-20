@@ -10,35 +10,41 @@
   <body>
     <!-------------------------- NAVBAR---------------------- -->
 
-    <header class="navbar">
-      <div class="logo">
+    <nav class="navbar">
+      <div class="nav-logo">
         <div class="logo-icon">
           <span>
             <a href="home.html">
-              <img
-                src="blog assests/logo-icon.png"
-                alt="logo-icon"
-                width="30px" /></a
+              <img src="assests/logo-icon.png" alt="" width="30px" /></a
           ></span>
           <h4>MediAlert</h4>
         </div>
-        <!-- Your Menu Links -->
-        <div>
-          <ul id="nav-menu" class="nav-links">
-            <a href="about.html">About us</a>
-            <a href="feature.html">Features</a>
-            <a href="FAQs.html">FAQs</a>
-            <a href="blog.html">Blogs</a>
-            <a href="#">Contact us</a>
-          </ul>
-        </div>
+      </div>
+
+      <div class="nav-links">
+        <ul class="nav-links" id="nav-links">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="feature.html">Features</a></li>
+          <li><a href="FAQs.html">FAQs</a></li>
+          <li><a href="blog.html">Blogs</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- The Hamburger Icon -->
+      <div class="hamburger" id="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
       </div>
 
       <div class="auth">
         <a href="#" class="login">Log in</a>
         <button class="btn">Sign Up</button>
       </div>
-    </header>
+    </nav>
+
     <!-- --------------------END OF NAVBAR-------------- -->
 
     <!-- -------------------HERO SECTION-------- -->
@@ -411,6 +417,6 @@
         </div>
       </section>
     </section>
-    <script src="script.js"></script>
+    <script src="feature.js"></script>
   </body>
 </html>

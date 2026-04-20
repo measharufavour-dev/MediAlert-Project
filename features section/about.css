@@ -10,9 +10,6 @@ body {
   color: #1e293b;
   overflow-x: hidden;
 }
-
-/* NAVBAR */
-
 /*----------------- NAVBAR--------------- */
 
 .navbar {
@@ -24,7 +21,6 @@ body {
   background: #ffffff;
   border-bottom: 1px solid #e5e7eb;
 }
-
 .navbar .logo {
   font-size: 20px;
   font-weight: 600;
@@ -41,10 +37,13 @@ body {
   font-size: 18px;
   gap: 0.5rem;
 }
-h4 a {
-  text-decoration: none;
+.nav-links {
+  display: flex;
 }
-.nav-links a {
+.nav-links li {
+  list-style: none;
+}
+.nav-links li a {
   margin: 0 14px;
   text-decoration: none;
   color: #6b7280;
@@ -77,7 +76,111 @@ h4 a {
   cursor: pointer;
 }
 
-/* --------------------END OF NAVBAR------------------ */
+/* /////////////////////////////// */
+
+/* --------------------END OF NAVBAR----------/*
+
+/* Hide Hamburger on Desktop */
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  margin-left: 0px;
+  background-color: black;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Mobile View (Below 768px) */
+@media (max-width: 768px) {
+  body {
+    background-color: #f5f6f8;
+  }
+  .navbar {
+    display: flex;
+    gap: 1.5rem;
+    width: 100%;
+    padding: 15px 10px;
+    background: #f6f7f8;
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  .nav-logo {
+    font-size: 20px;
+    font-weight: 600;
+    color: #023f7d;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    padding-left: 3rem;
+  }
+  .logo h4 {
+    color: #023f7d;
+  }
+  .hamburger {
+    display: block;
+    position: absolute;
+  }
+
+  .nav-links {
+    position: fixed;
+    left: -100%; /* Hidden off-screen to the left */
+    top: 60px;
+    flex-direction: column;
+    background-color: #f5f6f8;
+    color: gray;
+    width: 100%;
+    text-align: left;
+    padding-left: 1.5rem;
+    transition: 0.3s;
+    margin: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 6rem;
+  }
+
+  /* When the "active" class is added via JS, slide the menu in */
+  .nav-links.active {
+    left: 0;
+  }
+
+  .nav-links li {
+    margin-top: 0.3rem;
+    margin-bottom: 0.3rem;
+    background-color: white;
+    padding: 0.5rem;
+    text-transform: uppercase;
+    width: 70%;
+    font-weight: 600;
+  }
+
+  /* //////////////// */
+  /* 1. Animate the bars into an X when active */
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0; /* Hide the middle bar */
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg); /* Move down and rotate */
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg); /* Move up and rotate */
+  }
+
+  /* 2. Add transition to the original .bar class for smoothness */
+  .bar {
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+/* /////////////////////////////// */
+
+/* --------------------END OF NAVBAR----------/*
 
 /* HERO SECTION */
 .hero {
