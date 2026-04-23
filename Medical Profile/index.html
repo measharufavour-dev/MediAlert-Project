@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Medical Profile</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="header">
+      <h2>Set Up Your Medical profile</h2>
+    </section>
+    <h3>Personal Information</h3>
+    <section class="forms">
+      <form action="">
+        <div>
+          <label for=""> Full Name</label>
+          <input type="text" />
+        </div>
+        <div>
+          <label for="">Date for Birth</label>
+          <input type="datetime" />
+          <label for=""> DD/MM/YYYY</label>
+        </div>
+        <div>
+          <label for="">Gender</label>
+          <select name="" id="">
+            <option value=""></option>
+            <option value="">Male</option>
+            <option value="">Female</option>
+          </select>
+          <label for="">Optional</label>
+        </div>
+      </form>
+    </section>
+    <!-- --------- -->
+    <h3 class="highlight">Emergency Contact</h3>
+    <section class="form-2">
+      <form action="">
+        <div>
+          <label for=""> Contact Name</label>
+          <input type="text" />
+        </div>
+        <div>
+          <label for=""> Phone Number</label>
+          <input type="number" />
+        </div>
+
+        <div>
+          <label for=""> Relationship</label>
+          <input type="text" />
+          <label for=""> Eg. Parent, Sibling, Friend</label>
+        </div>
+      </form>
+    </section>
+
+    <!-- ---------------- -->
+    <h3>Medical Information</h3>
+    <section class="form-3">
+      <div>
+        <label for=""> Blood Group</label>
+        <input type="text" />
+      </div>
+      <div>
+        <label for="">Known Allergies</label>
+        <select name="" id="">
+          <option></option>
+          <option></option>
+        </select>
+      </div>
+    </section>
+
+    <!-- -------------- -->
+    <h3>Medical Conditions</h3>
+    <section class="form-4">
+      <div>
+        <p>
+          Select any conditions you currently have or have been diagnosed with.
+        </p>
+        <input
+          type="text"
+          placeholder="Search or select your medical condition"
+        />
+        <div>
+          <div class="btns">
+            <button>Hypertension</button> <button>Migraine</button
+            ><button>Asthma</button>
+          </div>
+          <div class="btns">
+            <button>Diabetes</button> <button>None</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ------------------- -->
+    <h3>Current Medications</h3>
+    <section class="form-5">
+      <div>
+        <h4>Add any medications you are currently using.</h4>
+        <div class="side-input-btn">
+          <input type="text" placeholder="Enter Medication name" />
+          <button class="highli-btn">Add</button>
+        </div>
+        <p>No medications added</p>
+      </div>
+    </section>
+    <!-- ------------------------ -->
+    <h3>Additional Notes</h3>
+    <section class="form-6">
+      <div>
+        <h4>Provide any extra health information that may help your doctor.</h4>
+        <input
+          type="text"
+          placeholder=" E.g Allergies, recent symptoms, past surgeries"
+        />
+      </div>
+    </section>
+
+    <footer>
+      <div class="text">
+        <div><img src="logo-icon.png" alt="logo-icon" /></div>
+        <div>
+          <p>
+            Your information is only used in emergency and is shared with
+            medical professionals when necessary.
+          </p>
+        </div>
+      </div>
+      <div class="btn-1">
+        <button>Save & Continue</button>
+        <a href="#"> Skip for now</a>
+      </div>
+    </footer>
+  </body>
+</html>
