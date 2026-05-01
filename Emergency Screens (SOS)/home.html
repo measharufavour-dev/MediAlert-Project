@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>MediAlert SOS</title>
+    <link rel="stylesheet" href="home.css" />
+  </head>
+  <body>
+    <!-- --------Header Section ----------- -->
+    <section class="header">
+      <!-- ------ -->
+      <div class="img"><img src="SOS assets/userprofileImg.png" alt="" /></div>
+      <!-- ------ -->
+      <div class="user-info">
+        <span> Good Morning</span>
+        <!-- I dont know if I should use an input field here, So that when the user Login Their names will show here -->
+        <h2>Jessica Lawson</h2>
+      </div>
+      <!-- ---- -->
+      <div class="notification">
+        <button class="notification-btn">
+          <img src="SOS assets/notification-icon.png" alt="notification-icon" />
+        </button>
+      </div>
+    </section>
+    <!-- -----End of Header Section ---- -->
+
+    <!--------- Main SOS Section ----------- -->
+    <div class="sos-container">
+      <p>
+        Press and hold for 3 seconds to dispatch emergency services instantly.
+      </p>
+
+      <div class="sos-wrapper">
+        <!-- The Progress Ring -->
+        <svg class="progress-ring" viewBox="0 0 100 100">
+          <circle class="ring-bg" cx="50" cy="50" r="80"></circle>
+          <circle id="progress-bar" cx="50" cy="50" r="70">SOS</circle>
+        </svg>
+
+        <!-- Your Original Button -->
+        <button id="sosButton" class="sos-button">
+          <img src="SOS assets/SOSBtn.png" alt="SOSBtn" />
+        </button>
+      </div>
+    </div>
+
+    <!-- <div class="sos-container">
+      <p>
+        Press and hold for 3 seconds to dispatch emergency services instantly.
+      </p>
+      <button id="sosButton" class="sos-button">
+        <img src="SOS assets/SOSBtn.png" alt="SOSBtn" />
+      </button>
+    </div> -->
+    <!-- END of Main SOS Section -->
+
+    <!-------- First Aid Section-------- -->
+    <section>
+      <div class="firstAid">
+        <div class="txt">
+          <h3>First Aid</h3>
+          <button>Tips</button>
+        </div>
+        <a href="#"> View all</a>
+      </div>
+
+      <!----- Allergies----- -->
+      <!-- 1 -->
+      <div class="alergy">
+        <div class="allergies">
+          <div>
+            <img src="SOS assets/yellow-warning allergy vector.png" alt="" />
+          </div>
+          <div>
+            <span class="highlight">Allergies</span>
+            <p>
+              Penicillin, <br />
+              Peanuts
+            </p>
+          </div>
+        </div>
+        <!-- 2 -->
+        <div class="allergies">
+          <div>
+            <img src="SOS assets/yellow-warning allergy vector.png" alt="" />
+          </div>
+          <div>
+            <span class="highlight">Allergies</span>
+            <p>
+              Penicillin,<br />
+              Peanuts
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!---------- End of First Aid Section------------ -->
+
+    <section class="footer">
+      <h4>Coverage Zones</h4>
+      <a href="#"> Benin Network</a>
+    </section>
+
+    <!-- Footer Navigaations Sections -->
+    <script src="script.js"></script>
+  </body>
+</html>

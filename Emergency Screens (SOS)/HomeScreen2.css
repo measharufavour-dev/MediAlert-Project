@@ -1,0 +1,80 @@
+
+/* SECOND SCREEN (Confirm For (Myself and Others)) */
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  margin: 5rem 20rem;
+  background-color:#eaf6f0;
+  font-family: "Inter", sans-serif;
+   
+}
+
+.confirm-card {
+
+  background: white;
+  width: 90%;
+  max-width: 400px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+
+.confirm-card h3 {
+  font-size:  1rem;
+  margin-bottom: 10px;
+  color: #1a1a1a;
+  font-weight: 800;
+}
+
+.confirm-card p {
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 25px;
+  line-height: 1.4;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+/* Button Styles from Figma */
+.btn-myself,
+.btn-others {
+  flex: 1;
+  padding: 12px 0;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  width: 10vw;
+}
+
+.btn-myself {
+  background-color: #0047ab; /* Deep Blue */
+}
+
+.btn-others {
+  background-color: #e31837; /* Emergency Red */
+}
+@media (max-width: 750px){
+      body{
+          margin: 15rem 2rem;
+      }
+      /* Button Styles from Figma */
+.btn-myself,
+.btn-others{
+      width: 20vw;
+}
+.confirm-card{
+     width: 120%;
+  max-width: 320px; 
+}
+
+}
