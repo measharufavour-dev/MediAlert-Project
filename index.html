@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MediAlert Onboarding</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="mobile-container">
+     <!-- Splash Screen -->
+      <section class="onboarding-screen active splash-mode" id="splash">
+        <img src="assets/Splash Screen.png" alt="MediAlert splash screen" class="splash-img">
+      </section>
+
+
+    <!-- Onboarding 1 -->
+     <section class="onboarding-screen" id="screen1">
+      <header class="top-nav">
+        <button class="skip-btn" onclick="window.location.href='login.html'">
+          <img src="assets/Skip.png" alt="skip">
+        </button>
+      </header>
+      <div class="illustration">
+        <img src="assets/c32d2782ef1fe149f650dd73ee17b7bf 1.png" alt="Emergency Support">
+      </div>
+      <h1>Help When You Need It Most</h1>
+      <p>Get immediate access to emergency support with just one tap.</p>
+
+      <div class="dots-container">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+      <button class="primary-btn">Next</button>
+    </section>
+
+    <!-- Onboarding 2 -->
+    <section class="onboarding-screen" id="screen2">
+      <div class="illustration">
+        <img src="assets/6efcdb8c3e6dca7d4a4d59032c741a77 1.png" alt="Emergency Alert">
+      </div>
+      <h1>One Tap Emergency Alert</h1>
+      <p>Send instant SOS alerts with your location to nearby hospitals and contacts.</p>
+        <div class="dots-container">
+          <span class="dot"></span>
+          <span class="dot active"></span>
+          <span class="dot"></span>
+        </div>
+      <button class="primary-btn">Next</button>
+    </section>
+
+    <!-- Onboarding 3 -->
+    <section class="onboarding-screen" id="screen3">
+      <div class="illustration">
+        <img src="assets/image 9.png" alt="Health Info">
+      </div>
+      <h1>Your Health Info, Ready to Save You</h1>
+      <p>Store medical details like allergies and emergency contacts so responders can act quickly.</p>
+      <span>Access first aid tips anytime, even before help arrives.</span>
+
+      <div class="dots-container">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot active"></span> 
+      </div>
+      <button class="primary-btn">Get Started</button>
+    </section>
+  </div>
+
+  <script>
+    const screens = document.querySelectorAll('.onboarding-screen');
+    let currentIndex = 0;
+
+    // Splash shows first
+    screens[currentIndex].classList.add('active');
+
+    // After 2s, move to onboarding
+    setTimeout(() => {
+      screens[currentIndex].classList.remove('active');
+      currentIndex++;
+      screens[currentIndex].classList.add('active');
+    }, 2000);
+
+    // Handle button clicks
+    document.querySelectorAll('.primary-btn').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        screens[currentIndex].classList.remove('active');
+        currentIndex++;
+
+        if (currentIndex < screens.length) {
+          screens[currentIndex].classList.add('active');
+        } else {
+          window.location.href = "login.html";
+        }
+      });
+    });
+  </script>
+</body>
+</html>
