@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Medi Alert Notifications</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="mobile-container">
+    <!-- Tabs -->
+    <div class="tabs">
+      <div class="tab active" onclick="showTab('all')">All</div>
+      <div class="tab" onclick="showTab('completed')">Completed</div>
+      <div class="tab" onclick="showTab('cancelled')">Cancelled</div>
+      <div class="tab" onclick="showTab('test')">Tests</div>
+    </div>
+
+    <!-- Notifications -->
+    <div id="notifications">
+      <div class="card completed">
+        <h3>Medical Emergency (Completed)</h3>
+        <p>April 16, 2028 at 2:45 PM</p>
+        <p>123 Main St, Downtown</p>
+        <p>Hospital: General Hospital</p>
+        <p>Response time: 8 minutes</p>
+      </div>
+
+      <div class="card cancelled">
+        <h3>False Alarm (Cancelled)</h3>
+        <p>April 27, 2028 at 9:55 PM</p>
+        <p>456 Oak Ave, Suburb</p>
+        <p>Hospital: N/A</p>
+        <p>Response time: Cancelled before dispatch</p>
+      </div>
+
+      <div class="card completed">
+        <h3>Medical Emergency (Completed)</h3>
+        <p>April 30, 2028 at 1:59 PM</p>
+        <p>123 Wire Road</p>
+        <p>Hospital: Metro Emergency Hospital</p>
+        <p>Response time: 3 minutes</p>
+      </div>
+
+      <div class="card test">
+        <h3>System Test (Test)</h3>
+        <p>April 16, 2028 at 2:45 PM</p>
+        <p>Home</p>
+        <p>Hospital: N/A</p>
+        <p>Response time: Test only</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function showTab(status) {
+      const tabs = document.querySelectorAll('.tab');
+      tabs.forEach(tab => tab.classList.remove('active'));
+      event.target.classList.add('active');
+
+      const cards = document.querySelectorAll('.card');
+      cards.forEach(card => {
+        if (status === 'all') {
+          card.style.display = 'block';
+        } else {
+          card.style.display = card.classList.contains(status) ? 'block' : 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MediAlert Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="mobile-container">
+    <div class="hero logo">
+        <img src="assets/Frame 2147225687.png" alt="MediAlert Logo" class="logo-img">
+    </div>
+    <section class="auth-screen">
+      <header class="auth-header">
+        <h1 id="header-title">Login to Your Account</h1>
+        <p id="header-description">Your Network of help is just one tap away.</p>
+      </header>
+
+      <!-- ... existing header ... -->
+       <form class="auth-form" id="loginForm">
+        <div class="input-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" placeholder="name@example.com" required>
+        </div>
+        
+        <div class="input-group">
+          <label for="password">Password</label>
+          <div class="password-wrapper">
+            <input type="password" id="password" placeholder="Enter your password" required>
+            <!-- Changed to .png to match your img tag -->
+             <img src="assets/eye.png" id="togglePassword" alt="Toggle Visibility" class="eye-icon">
+            </div>
+            <a href="#" class="forgot-link">Forgot Password?</a>
+          </div>
+          <button type="submit" class="primary-btn">Log In</button>
+        </form>
+        <!-- Kept just one divider -->
+         <div class="divider">
+          <span>Or continue with</span>
+        </div>
+
+        <!-- ... social buttons ... -->
+         <div class="social-login">
+          <button class="social-btn"><img src="assets/Frame 2147225688.png" alt="Google"></button>
+          <button class="social-btn"><img src="assets/Frame 2147225689.png" alt="Apple"></button>
+          <button class="social-btn"><img src="assets/Frame 2147225690.png" alt="Facebook"></button>
+        </div>
+        
+        <p class="footer-text">Don't have an account? <a href="signup.html">Sign Up</a></p>
+      </section>
+    </div>
+
+  <script>
+  const togglePassword = document.querySelector('#togglePassword');
+  const passwordInput = document.querySelector('#password');
+  const loginForm = document.querySelector('#loginForm');
+  // Toggle Password Visibility
+  togglePassword.addEventListener('click', function () {
+    const isPassword = passwordInput.getAttribute('type') === 'password';
+    passwordInput.setAttribute('type', isPassword ? 'text' : 'password');
+    
+    this.src = isPassword ? 'assets/eye-off.png' : 'assets/eye.png';
+});
+
+// Handle Login Redirect
+  loginForm.addEventListener('submit', function (e) {
+    e.preventDefault(); // Stop page refresh
+    
+    // You can add validation logic here later!
+    console.log("Logging in...");
+    window.location.href = 'location.html'; 
+});
+</script>
+</body>
+</html>
