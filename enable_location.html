@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enable Location</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <div class="mobile-container">
+    <header class="top-nav-left">
+      <button class="back-btn" onclick="history.back()">
+        <img src="assets/lucide_chevron-left.png" alt="back">
+      </button>
+    </header>
+    
+    <section class="location-content">
+    <div class="location-icon-container">
+      <img src="assets/358031304_931045e5-d0a0-4752-bc65-140ffbd2ff1d 1.png" alt="Location Map" class="main-icon">
+    </div>
+    
+    <h1>Enable Location Access</h1>
+    <p>We use your location to send accurate SOS alerts and help responders find you faster during emergencies.</p>
+
+    <div class="button-group">
+      <button class="outline-btn" id="enable-btn">Enable Location</button>
+      <button class="primary-btn-alt" onclick="window.location.href='home.html'">Not Now</button>
+    </div>
+  </section>
+  
+  <div class="modal-overlay" id="modalOverlay" style="display: none;">
+    
+    <div class="modal-card" id="warningModal" style="display: none;">
+      <div class="modal-icon warning">
+        <img src="assets/Layer 21.png" alt="Warning" class="modal-img">
+      </div>
+      <p>We use your location to send accurate SOS alerts and help responders reach you faster during emergencies.</p>
+      <div class="button-group">
+        <button class="modal-primary-btn" id="continueBtn">Continue</button>
+        <button class="modal-secondary-btn" id="backBtn">Back</button>
+      </div>
+    </div>
+  
+    <div class="modal-card" id="successModal" style="display: none;">
+      <div class="modal-icon success">
+        <img src="assets/danger 1 1.png" alt="Success" class="modal-img">
+      </div>
+      <h3>Location Access Enabled</h3>
+      <p>We use your location to send accurate SOS alerts and help responders reach you faster during emergencies.</p>
+      <button class="modal-primary-btn" onclick="window.location.href='home.html'">Continue</button>
+    </div>
+
+  </div> 
+</div> 
+<script>
+  const overlay = document.getElementById('modalOverlay');
+  const warningModal = document.getElementById('warningModal');
+  const successModal = document.getElementById('successModal');
+  const enableBtn = document.getElementById('enable-btn');
+  const continueBtn = document.getElementById('continueBtn');
+  const backBtn = document.getElementById('backBtn');
+  
+  enableBtn.addEventListener('click', () => {
+  // Step 1: Show warning modal first
+  overlay.style.display = 'flex';
+  warningModal.style.display = 'block';
+});
+
+// Step 2: If user clicks Continue, trigger geolocation
+continueBtn.addEventListener('click', () => {
+  warningModal.style.display = 'none';
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
+        // Success → show success modal
+        successModal.style.display = 'block';
+      },
+      (error) => {
+        alert("Please enable location services in your settings to proceed.");
+        overlay.style.display = 'none';
+      },
+      { enableHighAccuracy: true }
+    );
+  } else {
+    alert("Geolocation is not supported by this browser.");
+    overlay.style.display = 'none';
+  }
+});
+
+// Step 3: If user clicks Back, close modal
+backBtn.addEventListener('click', () => {
+  warningModal.style.display = 'none';
+  overlay.style.display = 'none';
+});
+</script>
+
+</body>
+</html>

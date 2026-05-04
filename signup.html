@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MediAlert - Sign Up</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="mobile-container">
+     <div class="hero logo">
+      <img src="assets/Frame 2147225687.png" alt="MediAlert Logo" class="logo-img">
+    </div>
+
+    <section class="auth-screen">
+      <header class="auth-header">
+        <h1>Create an Account</h1>
+        <p>Setup your safety profile and be ready for any emergency.</p>
+      </header>
+
+      <form class="auth-form" onsubmit="event.preventDefault()">
+        <div class="input-group">
+          <label for="fullname">Full Name</label>
+          <input type="text" id="fullname" placeholder="Enter your full name" required>
+        </div>
+
+        <div class="input-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" placeholder="name@example.com" required>
+        </div>
+        
+        <div class="input-group">
+          <label for="password">Password</label>
+          <div class="password-wrapper">
+            <input type="password" id="password" placeholder="Create a strong password" required>
+            <img src="assets/eye.png" class="toggle-password eye-icon" data-target="password" alt="Toggle Visibility">
+          </div>
+        </div>
+        
+        <div class="input-group">
+          <label for="confirm-password">Confirm Password</label>
+          <div class="password-wrapper">
+            <input type="password" id="confirm-password" placeholder="Re-enter password" required>
+            <img src="assets/eye.png" class="toggle-password eye-icon" data-target="confirm-password" alt="Toggle Visibility">
+          </div>
+        </div>
+
+
+        <div class="checkbox-group">
+            <input type="checkbox" id="terms" required>
+            <label for="terms">I agree with the <strong>Terms of Service</strong></label>
+        </div>
+        
+        <button type="submit" class="primary-btn">Sign Up</button>
+      </form>
+
+      <div class="divider">
+        <span>Or sign up with</span>
+      </div>
+
+      <div class="social-login">
+        <button class="social-btn"><img src="assets/Frame 2147225688.png" alt="Google"></button>
+        <button class="social-btn"><img src="assets/Frame 2147225689.png" alt="Apple"></button>
+        <button class="social-btn"><img src="assets/Frame 2147225690.png" alt="Facebook"></button>
+      </div>
+
+      <p class="footer-text">Already a user? <a href="login.html">Log In</a></p>
+    </section>
+  </div>
+
+  <script>
+  // Handle Multiple Password Toggles
+  document.querySelectorAll('.toggle-password').forEach(icon => {
+    icon.addEventListener('click', function() {
+      const targetId = this.getAttribute('data-target');
+      const input = document.getElementById(targetId);
+      const isPassword = input.getAttribute('type') === 'password';
+      
+      input.setAttribute('type', isPassword ? 'text' : 'password');
+      this.src = isPassword ? 'assets/eye-off.png' : 'assets/eye.png';
+    });
+  });
+
+  // Handle Form Submission
+  document.querySelector('.auth-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const pass = document.getElementById('password').value;
+    const confirmPass = document.getElementById('confirm-password').value;
+
+    if (pass !== confirmPass) {
+      alert("Passwords do not match!");
+      return;
+    }
+
+    // Success: Redirect to location setup
+    window.location.href = 'location.html';
+  });
+</script>
+</body>
+</html>

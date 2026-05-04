@@ -1,0 +1,566 @@
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #e5e5e5; /* "Desk" color behind the phone */
+}
+
+/* Ensure the container stays centered and looks like a mobile screen */
+.mobile-container {
+  position: relative; /* Add this to anchor the absolute modal */
+  max-width: 430px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  min-height: 100vh;
+}
+
+/* Special mode for Splash to override onboarding padding */
+.onboarding-screen.splash-mode {
+  padding: 0 !important;
+  justify-content: center;
+  align-items: center;
+  background-color: #0A2A66; /* Matches the MediAlert primary blue */
+}
+
+.splash-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* This makes the image fill the entire container */
+  display: block;
+}
+
+.onboarding-screen {
+  display: none;
+  flex-direction: column;
+  align-items: center; /* Centers items horizontally */
+  justify-content: center; /* Centers items vertically */
+  height: 100%;
+  width: 100%;
+  padding: 40px 24px;
+  box-sizing: border-box;
+  text-align: center;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.onboarding-screen.active {
+  display: flex;
+}
+
+.hero.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 60px; /* Adjust based on Figma notch space */
+  margin-bottom: 20px;
+}
+
+.logo-img {
+  width: 392px; /* Adjust to match your Figma asset size */
+  height: 99.12px;
+}
+
+
+.illustration {
+  width: 100%;
+  flex-grow: 1; /* Takes up available space to push text down */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.illustration img {
+  max-width: 80%;
+  height: auto;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #0A2A66;
+  margin: 20px 0 12px;
+}
+
+p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 24px;
+}
+
+span {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 20px;
+}
+
+/* UI Elements */
+.dots-container {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 32px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  background-color: #D9D9D9;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.dot.active {
+  background-color: #0A2A66;
+  width: 24px;
+  border-radius: 4px;
+}
+
+.primary-btn {
+  width: 100%;
+  background-color: #0A2A66;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 18px;
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: transform 0.1s ease;
+}
+
+.primary-btn:active {
+  transform: scale(0.96);
+}
+
+.top-nav {
+  position: absolute;
+  top: 40px; /* Adjusted for "notch" space */
+  right: 20px;
+  z-index: 10;
+}
+
+.auth-screen {
+  padding: 60px 24px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.auth-header {
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+.auth-header h1 {
+  margin: 0;
+  padding: 0;
+}
+
+.auth-header p {
+  padding: 0;
+  margin-top: 8px;
+  text-align: left;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 8px;
+}
+
+.input-group label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #0A2A66;
+}
+
+.input-group input {
+  padding: 16px;
+  border: 1px solid #D9D9D9;
+  border-radius: 12px;
+  font-size: 16px;
+  outline: none;
+}
+
+/* Anchor for the absolute positioned icon */
+.password-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+/* Position the icon inside the input field */
+.eye-icon {
+  position: absolute;
+  right: 16px; /* Adjust spacing from the right edge */
+  width: 20px;
+  cursor: pointer;
+  z-index: 2; /* Ensures it stays on top of the input */
+  opacity: 0.6;
+}
+
+/* Add padding to the input so text doesn't overlap the icon */
+.password-wrapper input {
+  width: 100%;
+  padding-right: 45px; /* Creates space for the eye icon */
+}
+
+/* Hide the default eye icon in Chrome, Edge, and Safari */
+input::-ms-reveal,
+input::-ms-clear {
+  display: none;
+}
+
+input::-webkit-contacts-auto-fill-button,
+input::-webkit-credentials-auto-fill-button {
+  visibility: hidden;
+  display: none !important;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+}
+
+.forgot-link {
+  align-self: flex-end;
+  font-size: 14px;
+  color: #0A2A66;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Style for the divider line */
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 20px 0;
+  color: #888;
+}
+
+.divider::before, .divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid #ddd;
+}
+
+.divider span {
+  padding: 0 10px;
+  font-size: 14px;
+}
+
+.social-login {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: auto;
+}
+
+.social-btn {
+  background: white;
+  border: 1px solid #E5E5E5;
+  padding: 12px;
+  border-radius: 12px;
+  cursor: pointer;
+  flex: 1;
+  max-width: 80px;
+}
+
+.social-btn img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.checkbox-group input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #0A2A66; /* Matches your primary blue */
+  cursor: pointer;
+}
+
+.checkbox-group label {
+  font-size: 14px;
+  color: #666;
+  cursor: pointer;
+}
+
+.checkbox-group strong {
+  color: #0A2A66;
+}
+
+.footer-text {
+  font-size: 14px;
+  color: #666;
+}
+
+.footer-text a {
+  color: #0A2A66;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Navigation */
+.top-nav-left {
+  position: absolute;
+  top: 40px;
+  left: 20px;
+  z-index: 10;
+}
+
+.back-btn img {
+  width: 24px;
+  height: 24px;
+}
+
+/* Specific Location Layout */
+.location-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 0 30px;
+}
+
+.location-icon-container {
+  margin-bottom: 40px;
+}
+
+.main-icon {
+  width: 180px; /* Matching the large blue icon in Figma */
+}
+
+.button-group {
+  width: 100%;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Figma Button Styles */
+.outline-btn {
+  background: #0A2A66; /* Darker blue from Figma top button */
+  border: none;
+  color: white;
+  padding: 16px;
+  border-radius: 30px; /* More rounded pill shape */
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.primary-btn-alt {
+  background: white; 
+  color: #0A2A66;
+  border: 2px solid #0A2A66; 
+  padding: 16px;
+  border-radius: 30px;
+  font-weight: 600;
+}
+
+/* Modal Styling */
+
+/* Overlay backdrop */
+.modal-overlay {
+  display: none; /* hidden by default */
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.4);
+  backdrop-filter: blur(8px); /* This adds the nice Figma-style background blur */
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* Modal card */
+.modal-card {
+  background: #fff;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 360px;
+  padding: 24px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  animation: fadeIn 0.3s ease;
+}
+
+/* Icon styles */
+.modal-icon {
+  margin-bottom: 16px;
+}
+.modal-icon img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+}
+.modal-icon.warning img {
+  filter: hue-rotate(0deg) saturate(5); /* red tone */
+}
+.modal-icon.success img {
+  filter: hue-rotate(90deg) saturate(5); /* green tone */
+}
+
+.modal-card .button-group {
+  display: flex;
+  flex-direction: column; /* Stacked buttons for easier mobile tapping */
+  gap: 12px;
+  width: 100%;
+}
+
+/* Text */
+.modal-card h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.modal-card p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+/* Buttons */
+.modal-primary-btn,
+.modal-secondary-btn {
+  display: inline-block;
+  padding: 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  margin: 0;
+  width: 100%;
+}
+
+.modal-primary-btn {
+  background: white;
+  color: #0A2A66;
+  border: 2px solid #0A2A66;
+}
+
+.modal-secondary-btn {
+  background: white;
+  color: #0A2A66;
+  border: 2px solid #0A2A66;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Refined Tabs to match Figma */
+.tabs {
+  display: flex;
+  background-color: #F8F9FE; /* Light blue-ish grey background */
+  padding: 8px;
+  border-radius: 12px;
+  margin: 10px 16px 24px;
+  gap: 4px;
+}
+
+.tab {
+  flex: 1;
+  text-align: center;
+  padding: 10px 4px;
+  cursor: pointer;
+  color: #666;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: all 0.2s ease-in-out;
+  border-bottom: none; /* Removed the line to use a pill style */
+}
+
+.tab.active {
+  background-color: #0A2A66; /* Your primary blue */
+  color: #FFFFFF;
+  box-shadow: 0 4px 10px rgba(10, 42, 102, 0.2);
+}
+
+/* Figma-Style Notification Cards */
+.card {
+  background: #FFFFFF;
+  border-radius: 16px;
+  padding: 20px;
+  margin: 0 16px 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  border: 1px solid #F0F0F0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle Status Bar (left edge) */
+.card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 6px;
+}
+
+.card.completed::before { background-color: #27AE60; }
+.card.cancelled::before { background-color: #EB5757; }
+.card.test::before { background-color: #2D9CDB; }
+
+.card h3 {
+  margin: 0 0 6px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #1A1A1A;
+}
+
+.card p {
+  margin: 2px 0;
+  font-size: 13px;
+  color: #7A7A7A;
+  display: flex;
+  align-items: center;
+}
+
+/* Adding space for small icons if you add them later */
+.card p::before {
+  content: "•";
+  margin-right: 8px;
+  color: #0A2A66;
+  font-weight: bold;
+}
+
+.tab:hover {
+  background-color: #E5EAF5;
+}
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+  transition: all 0.2s ease;
+}
