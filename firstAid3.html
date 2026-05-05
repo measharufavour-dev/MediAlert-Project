@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <div class="nav">
+        <a href="firstAid2.html">
+          <img src="firstAid assests/left arrow.png" alt="" />
+          <h1>Select Symptoms</h1></a
+        >
+      </div>
+      <div>
+        <button>
+          <span> Search for symptoms</span>
+          <img
+            src="firstAid assests/search icon.png"
+            alt=" search icon"
+            width="15px"
+          />
+        </button>
+      </div>
+    </header>
+    <section>
+      <p class="instruction-text">
+        Choose all symptoms you’re noticing and we’ll guide you on what to do
+        next.
+      </p>
+
+      <div class="parent-quick-access-con">
+        <div class="child-img-small">
+          <h4>Chest Pain</h4>
+        </div>
+        <div class="child-img-small"><h4>Difficulty breathing</h4></div>
+        <div class="child-img-small"><h4>Unconsciousness</h4></div>
+        <div class="child-img-small"><h4>Bleeding</h4></div>
+        <div class="child-img-small"><h4>Seizures</h4></div>
+        <div class="child-img-small"><h4>Dizziness</h4></div>
+        <div class="child-img-small"><h4>High fever</h4></div>
+        <div class="child-img-small"><h4>Weakness</h4></div>
+      </div>
+    </section>
+
+    <section>
+      <!------------- Action-Btn---------------- -->
+      <div class="bottom-action">
+        <button class="get-help-btn">Get Help</button>
+      </div>
+      <section>
+        <div class="sos-container">
+          <div class="sos-wrapper">
+            <!-- The Progress Ring -->
+            <svg class="progress-ring" viewBox="0 0 100 100">
+              <circle class="ring-bg" cx="50" cy="50" r="80"></circle>
+              <circle id="progress-bar" cx="50" cy="50" r="70">SOS</circle>
+            </svg>
+
+            <!-- Your Original Button -->
+            <button id="sosButton" class="sos-button">
+              <img
+                src="Emergency Screens (SOS)/SOS assets/SOSBtn.png "
+                alt="SOSBtn"
+                width="100"
+              />
+            </button>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- ----------------------------- -->
+    <!-- ---------------------------------- -->
+    <!-- ---------------------------------- -->
+
+    <style>
+      /* --- My Global Styles --- */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      body {
+        background-color: #f8f9fa;
+        padding: 20px;
+        max-width: 450px;
+        margin: 0 auto;
+      }
+      /* --- Header Adjustments --- */
+      header button {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 15px;
+        border: 1px solid #ddd;
+        border-radius: 25px;
+        background: white;
+        color: #888;
+        cursor: pointer;
+      }
+
+      header .nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 15px;
+        text-decoration: none;
+      }
+      .nav a {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-decoration: none;
+      }
+
+      header h1 {
+        font-size: 20px;
+        font-weight: 700;
+        color: #023f7d;
+      }
+
+      /* --- Symptom Screen Specifics --- */
+      .instruction-text {
+        font-size: 14px;
+        color: #666;
+        margin: 15px 0 25px;
+        line-height: 1.4;
+      }
+
+      /* 2-Column Grid for Symptoms */
+      .parent-quick-access-con {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+        margin-bottom: 100px;
+      }
+
+      .child-img-small {
+        background: white;
+        border: 1px solid #e0e0e0;
+        border-radius: 12px;
+        padding: 20px 10px;
+        text-align: center;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        border: 1px solid #023f7d34;
+      }
+
+      /* Hover/Selection effect */
+      .child-img-small:hover {
+        border-color: #004696;
+        background-color: #f8fbff;
+      }
+
+      .child-img-small h4 {
+        font-size: 15px;
+        color: #023f7d;
+        font-weight: 700;
+        line-height: 1.2;
+      }
+
+      /* --- The "Get Help" Sticky Button --- */
+      .bottom-action {
+        width: 100%;
+        padding: 20px;
+        background: linear-gradient(transparent, white 20%);
+        text-align: center;
+      }
+
+      .get-help-btn {
+        background-color: #004696;
+        color: white;
+        width: 100%;
+        max-width: 360px;
+        padding: 16px;
+        border: none;
+        border-radius: 30px;
+        font-size: 16px;
+        font-weight: 700;
+        cursor: pointer;
+        box-shadow: 0 4px 12px rgba(0, 70, 150, 0.2);
+      }
+
+      .get-help-btn:active {
+        transform: scale(0.98);
+      }
+
+      .btn button:hover,
+      header button:hover {
+        background-color: #f1f3f4;
+        border-color: #dadce0;
+      }
+      .child-img-small:hover {
+        transform: translateY(5px);
+        transition: transform 0.3s ease;
+        opacity: 0.8;
+      }
+      .child-img-small:active {
+        transform: scale(0.96);
+        background-color: #f8f9fa;
+      }
+      /* ==================================================== */
+
+      .sos-wrapper {
+        position: relative;
+        width: 150px;
+        height: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 6rem auto;
+      }
+
+      .sos-button {
+        position: relative;
+        z-index: 2;
+        background: none;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+      }
+
+      .progress-ring {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 50%;
+        transform: rotate(-90deg);
+        z-index: 1;
+        border-radius: 50%;
+      }
+
+      .ring-bg {
+        fill: none;
+        stroke: #f3f3f3;
+        stroke-width: 6;
+        border-radius: 50%;
+      }
+
+      #progress-bar {
+        fill: none;
+        stroke: #ff3b30;
+        stroke-width: 6;
+        stroke-linecap: round;
+        stroke-dasharray: 283;
+        stroke-dashoffset: 283;
+        transition: stroke-dashoffset 3s linear;
+      }
+
+      .holding #progress-bar {
+        stroke-dashoffset: 0;
+      }
+      .sos-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        text-align: center;
+        margin-top: 2rem;
+        position: absolute;
+        top: 107%;
+        left: 57%;
+      }
+      .sos-container p {
+        color: gray;
+      }
+      .sos-button {
+        border: none;
+        padding-top: 1.5rem;
+        padding-bottom: 3rem;
+      }
+
+      /* --- Media Queries for Screen 3   --- */
+
+      /* 1. Large Mobile (Up to 480px) */
+      @media screen and (max-width: 480px) {
+        body {
+          padding: 15px;
+        }
+
+        .child-img-small {
+          padding: 15px 8px;
+        }
+
+        .get-help-btn {
+          width: 90%;
+        }
+      }
+
+      @media screen and (max-width: 400px) {
+        header h1 {
+          font-size: 18px;
+        }
+
+        .parent-quick-access-con {
+          gap: 8px;
+        }
+
+        .child-img-small h4 {
+          font-size: 13px;
+        }
+
+        .sos-container {
+          left: 50%;
+          transform: translateX(-50%);
+          width: 100%;
+          top: 50%;
+          left: 85%;
+        }
+      }
+
+      /* 3. Tiny Screens (iPhone SE / Small Androids) */
+      @media screen and (max-width: 340px) {
+        .parent-quick-access-con {
+          grid-template-columns: 1fr;
+        }
+
+        .instruction-text {
+          font-size: 13px;
+          margin-bottom: 15px;
+        }
+
+        .sos-wrapper {
+          transform: scale(0.9);
+          margin: 4rem auto;
+        }
+      }
+
+      @media screen and (min-height: 800px) {
+        .sos-wrapper {
+          margin: 8rem auto;
+        }
+      }
+    </style>
+
+    <!-- ----------------------------- -->
+    <!-- ---------------------------------- -->
+    <!-- ---------------------------------- -->
+    <script src="Emergency Screens (SOS)/script.js"></script>
+  </body>
+</html>

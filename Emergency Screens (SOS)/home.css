@@ -86,17 +86,16 @@ body {
 
 #progress-bar {
   fill: none;
-  stroke: #ff3b30; /* Red progress color */
+  stroke: #ff3b30;  
   stroke-width: 6;
   stroke-linecap: round;
-  stroke-dasharray: 283; /* Circumference (2 * PI * 45) */
-  stroke-dashoffset: 283; /* Start empty */
-  transition: stroke-dashoffset 3s linear; /* Matches your 3-second hold */
+  stroke-dasharray: 283;  
+  stroke-dashoffset: 283;  
+  transition: stroke-dashoffset 3s linear;  
 }
-
-/* Active state triggered by JS */
+ 
 .holding #progress-bar {
-  stroke-dashoffset: 0; /* Fills to full */
+  stroke-dashoffset: 0;  
 }
 
 /* End of Header Section (Greetings) */

@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>First Aid Section 2</title>
+    <link rel="stylesheet" href="firstAid.css" />
+  </head>
+  <body>
+    <header >
+      <div class="nav">
+        <a href="firstAid1.html">
+          <img src="firstAid assests/left arrow.png" alt="" />
+          <h1>First Aid</h1></a
+        >
+        <a href="firstAid3.html"><img src="firstAid assests/arrow.png" alt=""></a>
+      </div>
+      <div>
+        <button>
+          <span>Search for help (e.g. burns, choking, CPR)</span>
+          <img
+            src="firstAid assests/search icon.png"
+            alt=" search icon"
+            width="15px"
+          />
+        </button>
+      </div>
+    </header>
+    <!-- ----------------- -->
+    <section>
+      <h3>EMERGENCY SITUATIONS</h3>
+      <div class="parent-quick-access-con">
+        <!-- ----------1------------- -->
+        <div class="child-img-small">
+          <img src="firstAid assests/dead --zombie-.png" alt="" />
+          <h4>CPR</h4>
+        </div>
+
+        <!-- ---------------2------------ -->
+        <div class="child-img-small">
+          <img src="firstAid assests/lungs.png" alt="" />
+          <h4>Choking</h4>
+        </div>
+
+        <!-- ----------------3------------- -->
+        <div class="child-img-small">
+          <img src="firstAid assests/blood.png " alt="" />
+          <h4>Severe Bleeding</h4>
+        </div>
+      </div>
+    </section>
+    <!-- -------------End ------------ -->
+
+    <section>
+      <!-- Injuries Section -->
+      <h3>INJURIES</h3>
+      <div class="parent-quick-access-con">
+        <!-- ----------1------------- -->
+        <div class="child-img-small">
+          <img src="firstAid assests/burn-fire-flame-.png" alt="" />
+          <h4>Burns</h4>
+        </div>
+
+        <!-- ---------------2------------ -->
+        <div class="child-img-small">
+          <img src="firstAid assests/bone-broken-.png" alt="" />
+          <h4>Fractures</h4>
+        </div>
+
+        <!-- ----------------3------------- -->
+        <div class="child-img-small">
+          <img src="firstAid assests/band-aid.png " alt="" />
+          <h4>Cuts and Wounds</h4>
+        </div>
+      </div>
+    </section>
+    <!-- --------------- -->
+    <section>
+      <!--  Medical Conditions Section -->
+      <h3>MEDICAL CONDITIONS</h3>
+      <div class="parent-quick-access-con4">
+        <div class="row">
+          <!-- ----------1------------- -->
+          <div class="child-img-small">
+            <img src="firstAid assests/Zombie.png" alt="" />
+            <h4>Fainting</h4>
+          </div>
+
+          <!-- ---------------2------------ -->
+          <div class="child-img-small">
+            <img src="firstAid assests/lungs.png" alt="" />
+            <h4>Seizures</h4>
+          </div>
+        </div>
+
+        <!-- ----------------3------------- -->
+        <div class="row">
+          <div class="child-img-small">
+            <img src="firstAid assests/heart.png " alt="" />
+            <h4>Cardiac Arrest</h4>
+          </div>
+          <div class="child-img-small">
+            <img src="firstAid assests/inhaler-asthma.png" alt="" />
+            <h4>Asthma Arrest</h4>
+          </div>
+        </div>
+
+        <!-- ----------------4------------- -->
+      </div>
+    </section>
+    <!-- --------------- -->
+
+    <!-- --------------- -->
+    <section>
+      <!--  Medical Conditions Section -->
+      <h3>MEDICAL CONDITIONS</h3>
+      <div class="parent-quick-access-con">
+        <!-- ----------1------------- -->
+        <div class="child-img-small">
+          <img src="firstAid assests/snake.png" alt="" />
+          <h4>Snake Bite</h4>
+        </div>
+
+        <!-- ---------------2------------ -->
+        <div class="child-img-small">
+          <img src="firstAid assests/Vector.png" alt="" />
+          <h4>Electric Shock</h4>
+        </div>
+
+        <!-- ----------------3------------- -->
+        <div class="child-img-small">
+          <img src="firstAid assests/poison-svgrepo.png" alt="" />
+          <h4>Poisoning</h4>
+        </div>
+      </div>
+    </section>
+     <section>
+     
+      </div>
+      <div class="sos-container">
+        <div class="sos-wrapper">
+          <!-- The Progress Ring -->
+          <svg class="progress-ring" viewBox="0 0 100 100">
+            <circle class="ring-bg" cx="50" cy="50" r="80"></circle>
+            <circle id="progress-bar" cx="50" cy="50" r="70">SOS</circle>
+          </svg>
+
+          <!-- Your Original Button -->
+          <button id="sosButton" class="sos-button">
+            <img
+              src="Emergency Screens (SOS)/SOS assets/SOSBtn.png "
+              alt="SOSBtn"
+              width="100"
+            />
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- --------------- -->
+     <!-- ======================================== -->
+      <!-- --------------- -->
+     <!-- ======================================== --><!-- --------------- -->
+     <!-- ======================================== --><!-- --------------- -->
+     <!-- ======================================== -->
+
+    <style>
+      
+      header h1 {
+        font-size: 22px;
+        font-weight: 700;
+        color: #023f7d;
+        padding: 0.1rem;
+      }
+      header .nav {
+         display: flex;
+        flex-direction: row;
+        gap:15rem;
+        margin-bottom: 15px;
+        text-decoration: none;
+      }
+      a {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        text-align: left;
+        text-decoration: none;
+        gap: 0.2rem;
+      }
+      a img {
+        width: 30px;
+      }
+      /* --- Section Layout --- */
+      .parent-quick-access-con {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+        margin-bottom: 20px;
+      }
+
+      .row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+        margin-bottom: 20px;
+      }
+      /* --- The Row-Style Child Cards --- */
+
+      .child-img-small {
+        background: white;
+        border: 1px solid #1557b0;
+        border-radius: 12px;
+        padding: 15px 12px;
+        text-align: center;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        display: flex;
+        gap: 0.3rem;
+        align-items: center;
+        width: 18vw;
+      }
+
+      .child-img-small:active {
+        transform: scale(0.98);
+      }
+
+      .child-img-small img {
+        width: 24px;
+        height: 24px;
+        object-fit: contain;
+      }
+
+      .child-img-small h4 {
+        font-size: 15px;
+        color: #023f7d;
+        font-weight: 700;
+        line-height: 1.2;
+      }
+
+      /* --- Category Titles --- */
+      h3 {
+        font-size: 15px;
+        color: rgba(0, 0, 0, 0.765);
+        margin: 30px 0 20px;
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+      }
+
+      .child,
+      .child-img-small,
+      .quick-card {
+        transition: all 0.3s ease;
+        cursor: pointer;
+        border: 0.5px solid #1558b054;
+      }
+
+      .child:hover,
+      .child-img-small:hover,
+      .quick-card:hover {
+        background-color: #ffffff;
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+        border-color: #e8f0fe;
+      }
+
+      button {
+        transition: all 0.2s ease;
+      }
+
+      .text button:hover {
+        background-color: #1557b0;  
+        box-shadow: 0 4px 8px rgba(26, 115, 232, 0.3);
+      }
+
+      .btn button:hover,
+      header button:hover {
+        background-color: #f1f3f4;
+        border-color: #dadce0;
+      }
+
+      .child:active,
+      .child-img-small:active,
+      .quick-card:active,
+      button:active {
+        transform: scale(0.96);
+        background-color: #f8f9fa;
+      }
+
+      .child:hover .arrow img {
+        transform: translateX(5px);
+        transition: transform 0.3s ease;
+        opacity: 0.8;
+      }
+
+      .child-img-small:hover img,
+      .child-img img:hover {
+        transform: scale(1.1);
+        transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      } /* ==================================================== */
+
+      .sos-wrapper {
+        position: relative;
+        width: 150px;  
+        height: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 6rem auto;
+       
+      }
+
+      .sos-button {
+        position: relative;
+        z-index: 2;
+        background: none;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+      }
+
+      .progress-ring {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 50%;
+        transform: rotate(-90deg);  
+        z-index: 1;
+        border-radius: 50%;
+      }
+
+      .ring-bg {
+        fill: none;
+        stroke: #f3f3f3;  
+        stroke-width: 6;
+        border-radius: 50%;
+      }
+
+      #progress-bar {
+        fill: none;
+        stroke: #ff3b30;
+        stroke-width: 6;
+        stroke-linecap: round;
+        stroke-dasharray: 283;
+        stroke-dashoffset: 283;
+        transition: stroke-dashoffset 3s linear;
+      }
+
+      .holding #progress-bar {
+        stroke-dashoffset: 0;
+      }
+      .sos-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        text-align: center;
+        margin-top: 2rem;
+        position: absolute;
+        top: 137%;
+        left: 60%;
+      }
+      .sos-container p {
+        color: gray;
+      }
+      .sos-button {
+        border: none;
+        padding-top: 1.5rem;
+        padding-bottom: 3rem;
+      }
+
+
+      /* --- Media Queries for Screen 2 (Categories/Quick Access) --- */
+
+/* 1. Large Mobile (Up to 480px) */
+@media screen and (max-width: 480px) {
+  header .nav {
+    gap: 0;  
+    justify-content: space-between;  
+  }
+
+  .child-img-small {
+    width: auto;  
+    padding: 12px 10px;
+  }
+
+  .child-img-small h4 {
+    font-size: 14px;
+  }
+    .sos-container {
+    top: 100%; 
+  }
+}
+
+/* 2. Standard Mobile (360px - 400px) */
+@media screen and (max-width: 400px) {
+  .parent-quick-access-con, 
+  .row {
+    grid-template-columns: 1fr 1fr;  
+    gap: 10px;
+  }
+
+  .child-img-small h4 {
+    font-size: 13px;  
+  }
+}
+
+/* 3. Small Mobile Devices (iPhone SE / Fold / Tiny Androids) */
+@media screen and (max-width: 350px) {
+  header h1 {
+    font-size: 18px;
+  }
+
+  .parent-quick-access-con, 
+  .row {
+    grid-template-columns: 1fr;  
+  }
+
+  .child-img-small {
+    justify-content: flex-start;  
+    padding: 15px;
+  }
+
+  .sos-container {
+    left: 50%;  
+    transform: translateX(-50%);
+    width: 100%;
+  }
+}
+
+/*  SOS Absolute Positioning */
+@media screen and (max-height: 700px) {
+  .sos-wrapper {
+    margin: 4rem auto;  
+  }
+  
+  .sos-container {
+    top: 90%;  
+  }
+}
+
+    </style>
+
+    <script src="Emergency Screens (SOS)/script.js"></script>
+  </body>
+</html>

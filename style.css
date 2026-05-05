@@ -1,5 +1,5 @@
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   margin: 0;
   display: flex;
   justify-content: center;
@@ -23,7 +23,7 @@ body {
   padding: 0 !important;
   justify-content: center;
   align-items: center;
-  background-color: #0A2A66; /* Matches the MediAlert primary blue */
+  background-color: #0a2a66; /* Matches the MediAlert primary blue */
 }
 
 .splash-img {
@@ -63,7 +63,6 @@ body {
   height: 99.12px;
 }
 
-
 .illustration {
   width: 100%;
   flex-grow: 1; /* Takes up available space to push text down */
@@ -80,7 +79,7 @@ body {
 h1 {
   font-size: 24px;
   font-weight: 700;
-  color: #0A2A66;
+  color: #0a2a66;
   margin: 20px 0 12px;
 }
 
@@ -108,20 +107,20 @@ span {
 .dot {
   width: 8px;
   height: 8px;
-  background-color: #D9D9D9;
+  background-color: #d9d9d9;
   border-radius: 50%;
   transition: all 0.3s ease;
 }
 
 .dot.active {
-  background-color: #0A2A66;
+  background-color: #0a2a66;
   width: 24px;
   border-radius: 4px;
 }
 
 .primary-btn {
   width: 100%;
-  background-color: #0A2A66;
+  background-color: #0a2a66;
   color: white;
   font-size: 18px;
   font-weight: 600;
@@ -182,12 +181,12 @@ span {
 .input-group label {
   font-size: 14px;
   font-weight: 600;
-  color: #0A2A66;
+  color: #0a2a66;
 }
 
 .input-group input {
   padding: 16px;
-  border: 1px solid #D9D9D9;
+  border: 1px solid #d9d9d9;
   border-radius: 12px;
   font-size: 16px;
   outline: none;
@@ -235,7 +234,7 @@ input::-webkit-credentials-auto-fill-button {
 .forgot-link {
   align-self: flex-end;
   font-size: 14px;
-  color: #0A2A66;
+  color: #0a2a66;
   text-decoration: none;
   font-weight: 600;
 }
@@ -249,8 +248,9 @@ input::-webkit-credentials-auto-fill-button {
   color: #888;
 }
 
-.divider::before, .divider::after {
-  content: '';
+.divider::before,
+.divider::after {
+  content: "";
   flex: 1;
   border-bottom: 1px solid #ddd;
 }
@@ -269,7 +269,7 @@ input::-webkit-credentials-auto-fill-button {
 
 .social-btn {
   background: white;
-  border: 1px solid #E5E5E5;
+  border: 1px solid #e5e5e5;
   padding: 12px;
   border-radius: 12px;
   cursor: pointer;
@@ -295,7 +295,7 @@ input::-webkit-credentials-auto-fill-button {
 .checkbox-group input[type="checkbox"] {
   width: 18px;
   height: 18px;
-  accent-color: #0A2A66; /* Matches your primary blue */
+  accent-color: #0a2a66; /* Matches your primary blue */
   cursor: pointer;
 }
 
@@ -306,7 +306,7 @@ input::-webkit-credentials-auto-fill-button {
 }
 
 .checkbox-group strong {
-  color: #0A2A66;
+  color: #0a2a66;
 }
 
 .footer-text {
@@ -315,14 +315,20 @@ input::-webkit-credentials-auto-fill-button {
 }
 
 .footer-text a {
-  color: #0A2A66;
+  color: #0a2a66;
   font-weight: 700;
   text-decoration: none;
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Navigation */
@@ -366,7 +372,7 @@ input::-webkit-credentials-auto-fill-button {
 
 /* Figma Button Styles */
 .outline-btn {
-  background: #0A2A66; /* Darker blue from Figma top button */
+  background: #0a2a66; /* Darker blue from Figma top button */
   border: none;
   color: white;
   padding: 16px;
@@ -376,9 +382,9 @@ input::-webkit-credentials-auto-fill-button {
 }
 
 .primary-btn-alt {
-  background: white; 
-  color: #0A2A66;
-  border: 2px solid #0A2A66; 
+  background: white;
+  color: #0a2a66;
+  border: 2px solid #0a2a66;
   padding: 16px;
   border-radius: 30px;
   font-weight: 600;
@@ -390,10 +396,14 @@ input::-webkit-credentials-auto-fill-button {
 .modal-overlay {
   display: none; /* hidden by default */
   position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0,0,0,0.4);
-  backdrop-filter: blur(8px); /* This adds the nice Figma-style background blur */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(
+    8px
+  ); /* This adds the nice Figma-style background blur */
   justify-content: center;
   align-items: center;
   z-index: 999;
@@ -407,7 +417,7 @@ input::-webkit-credentials-auto-fill-button {
   max-width: 360px;
   padding: 24px;
   text-align: center;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   animation: fadeIn 0.3s ease;
 }
 
@@ -462,26 +472,32 @@ input::-webkit-credentials-auto-fill-button {
 
 .modal-primary-btn {
   background: white;
-  color: #0A2A66;
-  border: 2px solid #0A2A66;
+  color: #0a2a66;
+  border: 2px solid #0a2a66;
 }
 
 .modal-secondary-btn {
   background: white;
-  color: #0A2A66;
-  border: 2px solid #0A2A66;
+  color: #0a2a66;
+  border: 2px solid #0a2a66;
 }
 
 /* Animation */
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Refined Tabs to match Figma */
 .tabs {
   display: flex;
-  background-color: #F8F9FE; /* Light blue-ish grey background */
+  background-color: #f8f9fe; /* Light blue-ish grey background */
   padding: 8px;
   border-radius: 12px;
   margin: 10px 16px 24px;
@@ -502,19 +518,19 @@ input::-webkit-credentials-auto-fill-button {
 }
 
 .tab.active {
-  background-color: #0A2A66; /* Your primary blue */
-  color: #FFFFFF;
+  background-color: #0a2a66; /* Your primary blue */
+  color: #ffffff;
   box-shadow: 0 4px 10px rgba(10, 42, 102, 0.2);
 }
 
 /* Figma-Style Notification Cards */
 .card {
-  background: #FFFFFF;
+  background: #ffffff;
   border-radius: 16px;
   padding: 20px;
   margin: 0 16px 16px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
-  border: 1px solid #F0F0F0;
+  border: 1px solid #f0f0f0;
   position: relative;
   overflow: hidden;
 }
@@ -529,21 +545,27 @@ input::-webkit-credentials-auto-fill-button {
   width: 6px;
 }
 
-.card.completed::before { background-color: #27AE60; }
-.card.cancelled::before { background-color: #EB5757; }
-.card.test::before { background-color: #2D9CDB; }
+.card.completed::before {
+  background-color: #27ae60;
+}
+.card.cancelled::before {
+  background-color: #eb5757;
+}
+.card.test::before {
+  background-color: #2d9cdb;
+}
 
 .card h3 {
   margin: 0 0 6px;
   font-size: 16px;
   font-weight: 700;
-  color: #1A1A1A;
+  color: #1a1a1a;
 }
 
 .card p {
   margin: 2px 0;
   font-size: 13px;
-  color: #7A7A7A;
+  color: #7a7a7a;
   display: flex;
   align-items: center;
 }
@@ -552,15 +574,18 @@ input::-webkit-credentials-auto-fill-button {
 .card p::before {
   content: "•";
   margin-right: 8px;
-  color: #0A2A66;
+  color: #0a2a66;
   font-weight: bold;
 }
 
 .tab:hover {
-  background-color: #E5EAF5;
+  background-color: #e5eaf5;
 }
 .card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
   transition: all 0.2s ease;
 }
+
+/* ------------------------------Firt Aid Style Sheets ----------- */
+
