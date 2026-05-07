@@ -320,3 +320,86 @@ img {
   top: 0;
   z-index: 1000;
 }
+
+/* -------Footer Section ----------------- */
+/* ----------------Footer Section---------------- */
+.footer {
+  margin: 4rem;
+}
+.hero-commet {
+  padding-bottom: 6rem;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.425);
+  margin-bottom: 6rem;
+}
+.icon {
+  display: flex;
+  margin-bottom: 0.5rem;
+  gap: 0.5rem;
+  justify-content: flex-start;
+  align-items: center;
+}
+.icon h2 {
+  color: rgb(2, 63, 125);
+}
+/* .............links */
+
+.links {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  margin-bottom: 3rem;
+  margin-top: 2rem;
+}
+
+.first,
+.second,
+.third,
+.fourth {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.first,
+.second,
+.third,
+.fourth h4 {
+  color: #4d4a48;
+}
+.links ul li {
+  list-style-type: none;
+  margin-bottom: 1.3rem;
+  color: gray;
+  font-weight: 500;
+}
+.fourth h4,
+p {
+  color: #4d4a48;
+}
+.fourth input {
+  padding: 1rem;
+  border: none;
+  border-radius: 2px;
+  box-shadow: 2px 1px 1px rgba(128, 128, 128, 0.499);
+}
+.fourth button {
+  width: 10vw;
+  border: none;
+  border-radius: 5px;
+  padding: 0.4rem;
+  background-color: #023f7d;
+  color: white;
+}
+/* ......................footnotes */
+.footnotes {
+  display: flex;
+  justify-content: space-between;
+}
+.text p {
+  color: #4d4a48;
+}
+.links-social ul {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  gap: 1rem;
+  align-self: center;
+}
