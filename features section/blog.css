@@ -403,3 +403,56 @@ p {
   gap: 1rem;
   align-self: center;
 }
+/* 1. The Scroll Entrance Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply to the Hero Section and the main Featured Blog */
+.header, .blog {
+  animation: fadeInUp 1s ease-out both;
+}
+
+/* 2. Staggered reveal for the Blog Cards */
+.card-1 {
+  opacity: 0; /* Hidden initially */
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* This creates the 'one-by-one' appearing effect */
+.card-1:nth-child(1) { animation-delay: 0.2s; }
+.card-1:nth-child(2) { animation-delay: 0.4s; }
+.card-1:nth-child(3) { animation-delay: 0.6s; }
+
+/* 3. Image Hover Zoom (Professional Blog Touch) */
+.img img {
+  transition: transform 0.5s ease;
+}
+
+.card-1:hover .img img, 
+.blog:hover .img img {
+  transform: scale(1.05); /* Slight zoom in on the picture */
+}
+
+/* 4. Text Subtle Highlight on Hover */
+.card-1:hover h2 {
+  color: #023f7d; /* Changes title to your brand blue when hovering the card */
+  transition: color 0.3s ease;
+}
+
+/* 5. Search Bar Glow Effect */
+.search button {
+  transition: all 0.3s ease;
+}
+
+.search button:hover {
+  box-shadow: 0 0 15px rgba(2, 63, 125, 0.2);
+  transform: scale(1.02);
+}

@@ -1204,7 +1204,73 @@
         gap: 1rem;
         align-self: center;
       }
+
+      /* ========================= */
+      
+/* Define a smooth Zoom + Fade entrance */
+@keyframes softReveal {
+  from {
+    opacity: 0;
+    transform: scale(0.95); /* Slight zoom out */
+    filter: blur(5px); /* High-end medical feel */
+  }
+  to {
+    opacity: 1;
+    transform: scale(1); /* Normal size */
+    filter: blur(0);
+  }
+}
+
+/* Apply to all main sections */
+.header,
+.box-container,
+.benefits,
+.intelligence-section,
+.coordination-section,
+.management-section {
+  animation: softReveal linear both;
+  animation-timeline: view();
+  animation-range: entry 10% cover 30%;
+}
+
+/* --- THE FIX FOR YOUR PHONE & ABSOLUTE CARDS --- */
+/* We only use Opacity here so they NEVER move or disappear */
+@keyframes absoluteFade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 10;
+  }
+}
+
+/* .phone-img, 
+.status-card, 
+.overview-status-cards {
+  animation: absoluteFade linear both;
+  animation-timeline: view();
+  animation-range: entry 15% cover 35%; */
+/* Ensures they stay on top of the layout */
+/* z-index: 90; 
+} */
+
+/* Stagger effect for the Benefits Grid */
+.benefit-card {
+  animation: softReveal linear both;
+  animation-timeline: view();
+  animation-range: entry 5% cover 25%;
+}
+.benefit-card:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.benefit-card:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.benefit-card:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+   
     </style>
-    <script src="feature.js"></script>
   </body>
 </html>
