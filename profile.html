@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MedAlert Emergency App - Profile & Settings</title>
+  <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+  <header>
+    <button class="back-btn" onclick="window.history.back()">←</button>
+    <h1>Profile & Settings</h1>
+  </header>
+
+  <section class="profile">
+    <img src="assets/Mask group.png" alt="Profile Photo" class="profile-pic">
+    <h2>Jessica Lawson</h2>
+    <p>jessicalawson@gmail.com</p>
+    <button class="primary-btn" onclick="alert('Navigating to Edit Profile...')">Edit Profile</button>
+  </section>
+
+  <section class="settings">
+    <h3>Account</h3>
+    <ul>
+      <li onclick="location.href='#personal'">Personal Information</li>
+      <li onclick="location.href='emergency_contact.html'">Emergency Contacts</li>
+      <li onclick="location.href='#privacy'">Privacy and Security</li>
+    </ul>
+
+    <h3>Preferences</h3>
+    <ul>
+      <li onclick="location.href='notifications.html'">Notifications</li>
+      <li onclick="location.href='#sounds'">Alert Sounds</li>
+      <li onclick="location.href='#location'">Location Settings</li>
+      <li onclick="location.href='#language'">Language</li>
+      <li class="toggle-item">
+        Dark Mode
+        <input type="checkbox" id="darkMode">
+      </li>
+    </ul>
+
+    <h3>Safety</h3>
+    <ul>
+      <li onclick="location.href='#medical-id'">Medical ID</li>
+      <li onclick="location.href='#history'">Alert History</li>
+    </ul>
+
+    <h3>Support</h3>
+    <ul>
+      <li onclick="location.href='#help'">Help Centre</li>
+      <li onclick="location.href='#terms'">Terms of Service</li>
+      <li onclick="location.href='#policy'">Privacy Policy</li>
+      <li onclick="location.href='#about'">About</li>
+    </ul>
+  </section>
+
+  <footer>
+    <button class="signout-btn" onclick="confirmLogout()">Sign Out</button>
+    <button class="delete-btn" onclick="confirmDelete()">Delete Account</button>
+    <p>MedAlert Emergency App<br>
+       Version 1.0.0<br>
+       © 2023 MedAlert. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function confirmLogout() {
+      if(confirm("Are you sure you want to sign out?")) alert("Signed out!");
+    }
+    function confirmDelete() {
+      if(confirm("This will permanently delete your data. Proceed?")) alert("Account Deleted.");
+    }
+  </script>
+  <script type="module" src="firebase.js"></script>
+</body>
+</html>
