@@ -1,114 +1,448 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-      rel="stylesheet"
-    />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MediAlert SOS</title>
-    <link rel="stylesheet" href="home.css" />
-  </head>
-  <body>
-    <!-- --------Header Section ----------- -->
-    <section class="header">
-      <!-- ------ -->
-      <div class="img"><img src="SOS assets/userprofileImg.png" alt="" /></div>
-      <!-- ------ -->
-      <div class="user-info">
-        <span> Good Morning</span>
-        <h2>Jessica Lawson</h2>
-      </div>
-      <!-- ---- -->
-      <div class="notification">
-        <button class="notification-btn">
-          <img src="SOS assets/notification-icon.png" alt="notification-icon" />
-        </button>
-      </div>
-    </section>
-    <!-- -----End of Header Section ---- -->
+    <link rel="stylesheet" href="home.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com" />
+    <script src="https://unpkg.com"></script>
 
-    <!--------- Main SOS Section ----------- -->
-    <div class="sos-container">
-      <p>
-        Press and hold for 3 seconds to dispatch emergency services instantly.
-      </p>
+</head>
+<body>
 
-      <div class="sos-wrapper">
-        <!-- The Progress Ring -->
-        <svg class="progress-ring" viewBox="0 0 100 100">
-          <circle class="ring-bg" cx="50" cy="50" r="80"></circle>
-          <circle id="progress-bar" cx="50" cy="50" r="70">SOS</circle>
-        </svg>
+    <!-- Screen 1: Home -->
+<section id="screen-1" class="screen active">
+  <header class="app-header">
+    <div class="user-block">
+      <img src="assets/Ellipse 644.png" alt="User" class="avatar">
+      <div><span>Good Morning</span><h2>Jessica Lawson</h2></div>
+    </div>
+    <button class="notif-btn" onclick="window.location.href='notifications.html'">
+      <img src="assets/Frame 2147225598.png" alt="Bell">
+    </button>
+  </header>
 
-        <!-- Your Original Button -->
-        <button id="sosButton" class="sos-button">
-          <img src="SOS assets/SOSBtn.png" alt="SOSBtn" />
-        </button>
-      </div>
+  <div class="sos-hero">
+    <p>Press and hold for three seconds to dispatch emergency services instantly</p>
+    <div class="sos-wrapper">
+      <svg class="progress-ring" viewBox="0 0 100 100">
+        <circle class="ring-bg" cx="50" cy="50" r="45"></circle>
+        <circle id="progress-bar" cx="50" cy="50" r="45"></circle>
+      </svg>
+      <button id="sosTrigger" class="sos-trigger">
+        <img src="assets/Group 483547.png" alt="SOS Button">
+      </button>
+    </div>
+  </div>
+
+  <!-- Restore the First Aid Section with Cards -->
+  <div class="first-aid-section">
+  <div class="section-header">
+    <div class="header-left">
+      <span class="section-title">First Aid</span>
+      <span class="badge">Tips</span>
+    </div>
+    <span class="view-all">View all</span>
+  </div>
+
+  <div class="first-aid-grid">
+    <!-- Allergy Card -->
+    <div class="info-card">
+      <img src="assets/Group.png" alt="warning" class="card-icon">
+      <span class="card-label">Allergies</span>
+      <p class="card-value">Penicillin, Peanuts</p>
     </div>
 
-    <!-- <div class="sos-container">
-      <p>
-        Press and hold for 3 seconds to dispatch emergency services instantly.
-      </p>
-      <button id="sosButton" class="sos-button">
-        <img src="SOS assets/SOSBtn.png" alt="SOSBtn" />
-      </button>
-    </div> -->
-    <!-- END of Main SOS Section -->
+    <!-- Blood Group / Secondary Card -->
+    <div class="info-card">
+      <img src="assets/Group.png" alt="warning" class="card-icon">
+      <span class="card-label">Allergies</span>
+      <p class="card-value">Penicillin, Peanuts</p>
+    </div>
+  </div>
+</div>
 
-    <!-------- First Aid Section-------- -->
-    <section>
-      <div class="firstAid">
-        <div class="txt">
-          <h3>First Aid</h3>
-          <button>Tips</button>
+  <!-- Coverage Zones -->
+  <div class="coverage-zones mt-8">
+    <div class="flex items-center justify-between mb-4">
+      <h4 class="font-semibold text-lg">Coverage Zones</h4>
+      <span class="text-blue-600 font-medium text-sm">Benin Network</span>
+    </div>
+    <div class="flex-scroll">
+        <span class="zone-tab active">Ring - road</span>
+        <span class="zone-tab">GRA - Benin</span>
+        <span class="zone-tab">Sapele</span>
+    </div>
+
+    <div class="map-view">
+      <!-- Replace with your actual location embed link from Google Maps -->
+       <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d126896.34220821259!2d5.536192678731803!3d6.327804958774183!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sng!4v1778201600998!5m2!1sen!2sng" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      
+  </div>
+
+  <div class="nearby-centers mt-8">
+  <div class="flex items-center justify-between mb-4">
+    <h4 class="font-semibold text-lg">Nearby Centers</h4>
+    <span class="text-blue-600 font-medium text-sm cursor-pointer">See all</span>
+  </div>
+
+  <div class="center-list-container">
+    <!-- Card 1 -->
+    <div class="center-card">
+      <img src="assets/Frame 2147225619.png" alt="CNHU" class="center-img">
+      <div class="center-info">
+        <h5>CNHU Cotonou</h5>
+        <p>📍 2.4 km away • <span>Open 24/7</span></p>
+      </div>
+      <button class="call-center-btn">📞</button>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="center-card">
+      <img src="assets/Frame 2147225619.png" alt="CNHU" class="center-img">
+      <div class="center-info">
+        <h5>Stella Obasanjo Hosp.</h5>
+        <p>📍 3.1 km away • <span>Open 24/7</span></p>
+      </div>
+      <button class="call-center-btn">📞</button>
+    </div>
+  </div>
+</div>
+</section> 
+
+<nav class="bottom-nav">
+  <div class="nav-item active" onclick="goToScreen(1)">
+    <img src="assets/Frame 2147225755.png" alt="Home">
+  </div>
+  <div class="nav-item" onclick="goToScreen(5)">
+    <img src="assets/Frame 2147225757.png" alt="Location">
+  </div>
+  <div class="nav-item" onclick="goToScreen(9)">
+    <img src="assets/Frame 2147225758.png" alt="First Aid">
+  </div>
+  <div class="nav-item" onclick="goToScreen('profile.html')">
+    <img src="assets/Frame 2147225759.png" alt="Profile">
+  </div>
+</nav>
+
+  <!-- Screen 2: Choice Overlay (Modal) -->
+   <div id="selection-overlay" class="overlay">
+    <div class="modal-card pop-over">
+    <button class="close-modal" onclick="goToScreen(7)">✕</button>
+    
+    <h3>Confirm Emergency Request</h3>
+    <p>Who are you filing this emergency request for?</p>
+    
+    <div class="btn-group">
+      <button class="btn-myself" onclick="goToScreen(3)">Myself</button>
+      <button class="btn-other" onclick="goToScreen(4)">Others</button>
+    </div>
+  </div>
+</div>
+
+
+  <!-- Screen 3: Confirm Details (Myself) -->
+  <section id="screen-3" class="screen">
+    <div class="screen-header">
+      <button onclick="goToScreen(1)" class="back-btn">←</button>
+      <h2>Confirm Details</h2>
+    </div>
+    <!-- Form -->
+        <div class="form-content">
+            <!-- Full Name -->
+            <label>Full Name</label>
+            <input type="text" value="Jessica Lawson">
+
+            <!-- Medical Conditions -->
+            <label>Medical Conditions and allergies</label>
+            <input type="text" value="Asthma, Peanut and Penicillin allergy">
+
+            <!-- Symptoms -->
+            <label>Symptoms</label>
+            <div class="symptoms-row">
+                <input type="text" value="Hard time breathing, weakness" style="flex: 1;">
+                <button class="add-btn">+</button>
+            </div>
+
+            <!-- Location -->
+            <label>Location</label>
+            <input type="text" placeholder="Enter location">
+
+            <!-- Upload Photos -->
+            <label>Upload photos <span style="font-size:13px; color:#94a3b8;">(Optional)</span></label>
+            <div class="upload-box">
+                <p style="margin:0; font-size:15px;">Upload photos</p>
+            </div>
+
+            <!-- Critical -->
+            <div class="checkbox-item">
+                <input type="checkbox" id="critical">
+                <label for="critical" style="margin:0; cursor:pointer;">If critical signify</label>
+            </div>
+
+            <!-- Emergency Recipients -->
+            <label style="margin-top:10px;">Who Should Receive Emergency</label>
+            
+            <div class="checkbox-item">
+                <input type="checkbox" id="hospitals">
+                <label for="hospitals" style="margin:0; cursor:pointer;">Hospitals</label>
+            </div>
+            
+            <div class="checkbox-item">
+                <input type="checkbox" id="contacts">
+                <label for="contacts" style="margin:0; cursor:pointer;">Contacts</label>
+            </div>
+    </div>
+      <button class="btn-primary" onclick="goToScreen(6)">Send Now</button>
+    </div>
+  </section>
+
+  <!-- Screen 4: Third Party Details (Others) -->
+  <section id="screen-4" class="screen">
+    <div class="screen-header">
+      <button onclick="goToScreen(1)" class="back-btn">←</button>
+      <h2>Third Party Details</h2>
+    </div>
+    
+    <div class="form-content">
+        <!-- Victim Name -->
+        <label>Victim's Full Name</label>
+        <input type="text" placeholder="Enter name (if known)">
+
+        <!-- Contact Details Group -->
+        <label>Contact Details (If available)</label>
+        <div class="symptoms-row" style="gap: 10px;">
+            <input type="text" placeholder="Name" style="flex: 1;">
+            <input type="text" placeholder="Phone" style="flex: 1;">
         </div>
-        <a href="#"> View all</a>
+
+        <!-- Medical Conditions -->
+        <label>Medical Conditions and allergies</label>
+        <div class="symptoms-row">
+            <input type="text" placeholder="List any known conditions" style="flex: 1;">
+            <button class="add-btn">+</button>
+        </div>
+
+        <!-- Symptoms -->
+        <label>Symptoms</label>
+        <input type="text" placeholder="Describe what you see">
+
+        <!-- Location -->
+        <label>Location</label>
+        <input type="text" placeholder="Address or landmark">
+
+        <!-- Upload Photos -->
+        <label>Upload photos <span style="font-size:13px; color:#94a3b8;">(Optional)</span></label>
+        <div class="upload-box" style="border: 2px dashed #cbd5e1; padding: 20px; text-align: center; border-radius: 16px;">
+            <p style="margin:0; font-size:15px; color:#64748b;">Tap to upload photos</p>
+        </div>
+
+        <!-- Critical -->
+        <div class="checkbox-item" style="margin-top: 20px;">
+            <input type="checkbox" id="critical-other">
+            <label for="critical-other" style="margin:0; cursor:pointer;">If critical signify</label>
+        </div>
+
+        <button class="btn-primary" onclick="goToScreen(6)" style="margin-top: 30px;">Send Now</button>
+    </div>
+  </section>
+
+    <!-- Screen 6: Success -->
+  <section id="screen-6" class="screen">
+    <div class="success-view">
+        <div class="status-icon">
+            <img src="assets/Frame 2147225746.png" alt="success">
+        </div>
+        <h2>Help is on the way</h2>
+        <p>Emergency services have been notified and are en route to your location.</p>
+        <button class="btn-outline" onclick="window.location.href='firstaid.html'">Administer First Aid</button>
+         <button class="btn-outline" onclick="goToScreen(8)">Track Ambulance</button>
+         <button class="btn-primary" onclick="goToScreen(1)">Back to Home</button>
+    </div>
+  </section>
+
+    <!-- Screen 7: Cancelled -->
+  <section id="screen-7" class="screen">
+    <div class="cancel-view">
+        <div class="status-icon">
+            <img src="assets/Frame 2147225746 (1).png" alt="emergency cancel">
+        </div>
+        <h2>Emergency was cancelled</h2>
+        <button class="btn-primary" onclick="goToScreen(1)">Back to Home</button>
+    </div>
+  </section>
+
+  <!-- Screen 8: Ambulance Tracking -->
+<section id="screen-8" class="screen">
+  <div class="screen-header">
+    <button onclick="goToScreen(6)" class="back-btn">←</button>
+    <h2>Track Ambulance</h2>
+  </div>
+
+  <!-- Map Container (Leaflet will load here) -->
+  <div class="map-view" id="map" style="height: 350px; position: relative;">
+      <!-- These pins sit on top of the map -->
+      <div class="ambulance-pin" style="position:absolute; top:30%; left:20%; font-size:24px; z-index: 1000;">🚑</div>
+      <div class="user-pin" style="position:absolute; bottom:20%; right:30%; font-size:24px; z-index: 1000;">📍</div>
+  </div>
+
+  <!-- Tracking Card (Placed below the map) -->
+  <div class="tracking-card" style="margin-top: -20px; position: relative; z-index: 1100;">
+      <div class="eta-section">
+          <span class="eta-label">Estimated Arrival</span>
+          <h3 class="eta-time">08:45 Mins</h3>
+      </div>
+      
+      <div class="driver-profile">
+          <img src="assets/Ellipse 644.png" alt="Driver" class="driver-avatar">
+          <div class="driver-details">
+              <h4>Samuel Ade</h4>
+              <p>Ambulance ID: #AMB-204</p>
+          </div>
+          <button class="call-btn">📞</button>
       </div>
 
-      <!----- Allergies----- -->
-      <!-- 1 -->
-      <div class="alergy">
-        <div class="allergies">
-          <div>
-            <img src="SOS assets/yellow-warning allergy vector.png" alt="" />
-          </div>
-          <div>
-            <span class="highlight">Allergies</span>
-            <p>
-              Penicillin, <br />
-              Peanuts
-            </p>
-          </div>
-        </div>
-        <!-- 2 -->
-        <div class="allergies">
-          <div>
-            <img src="SOS assets/yellow-warning allergy vector.png" alt="" />
-          </div>
-          <div>
-            <span class="highlight">Allergies</span>
-            <p>
-              Penicillin,<br />
-              Peanuts
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!---------- End of First Aid Section------------ -->
+      <button class="btn-primary" onclick="goToScreen(1)">Help has Arrived</button>
+  </div>
+</section>
 
-    <section class="footer">
-      <h4>Coverage Zones</h4>
-      <a href="#"> Benin Network</a>
-    </section>
+<script>
+  // --- 1. Global Variables ---
+  const sosBtn = document.getElementById('sosTrigger');
+  const bar = document.getElementById('progress-bar');
+  const overlay = document.getElementById('selection-overlay');
+  const nav = document.querySelector('.bottom-nav');
 
-    <!-- Footer Navigaations Sections -->
-    <script src="script.js"></script>
-  </body>
+  let holdTimer;
+  let isHolding = false;
+  let liveMap; 
+  let ambulanceMarker;
+  const holdDuration = 3000; 
+
+  // Progress ring setup based on SVG radius
+  const radius = 45;
+  const circumference = 2 * Math.PI * radius;
+  if (bar) {
+    bar.style.strokeDasharray = circumference;
+    bar.style.strokeDashoffset = circumference;
+  }
+
+  // --- 2. Master Navigation Function ---
+  function goToScreen(num) {
+    if (overlay) overlay.style.display = 'none';
+
+    document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+    const target = document.getElementById(`screen-${num}`);
+
+    if (target) {
+      target.classList.add('active');
+      if (num === 8) startAmbulanceSim();
+    }
+
+    if (nav) {
+      nav.style.display = (num === 1) ? 'flex' : 'none';
+    }
+
+    window.scrollTo(0, 0);
+  }
+
+  // --- 3. Overlay Controls ---
+  function openSelection() {
+    if (overlay) overlay.style.display = 'flex';
+  }
+
+  function closeOverlay(e) {
+    if (e && e.target.id === 'selection-overlay') {
+      overlay.style.display = 'none';
+    }
+  }
+  if (overlay) overlay.addEventListener('click', closeOverlay);
+
+  // --- 4. SOS Hold Interaction ---
+  const startHold = () => {
+    if (isHolding) return;
+    isHolding = true;
+    const startTime = Date.now();
+
+    holdTimer = setInterval(() => {
+      const elapsed = Date.now() - startTime;
+      const progress = Math.min(elapsed / holdDuration, 1);
+
+      if (bar) bar.style.strokeDashoffset = circumference - (progress * circumference);
+
+      if (progress >= 1) {
+        clearInterval(holdTimer);
+        openSelection();
+        resetRing();
+        isHolding = false;
+      }
+    }, 50);
+  };
+
+  const cancelHold = () => {
+    isHolding = false;
+    clearInterval(holdTimer);
+    resetRing();
+  };
+
+  const resetRing = () => {
+    if (bar) bar.style.strokeDashoffset = circumference;
+  };
+
+  if (sosBtn) {
+    sosBtn.addEventListener('mousedown', startHold);
+    sosBtn.addEventListener('mouseup', cancelHold);
+    sosBtn.addEventListener('mouseleave', cancelHold);
+    sosBtn.addEventListener('touchstart', (e) => { e.preventDefault(); startHold(); });
+    sosBtn.addEventListener('touchend', cancelHold);
+  }
+
+  // --- 5. Ambulance Simulation with Leaflet ---
+  function startAmbulanceSim() {
+    setTimeout(() => {
+      if (!liveMap) {
+        // Initialize map centered on Benin City
+        liveMap = L.map('map').setView([6.3325, 5.6226], 15);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          attribution: '© OpenStreetMap'
+        }).addTo(liveMap);
+
+        // Add user marker
+        L.marker([6.3300, 5.6200]).addTo(liveMap).bindPopup("You are here");
+
+        // Add ambulance marker
+        ambulanceMarker = L.marker([6.3325, 5.6226]).addTo(liveMap).bindPopup("Ambulance");
+      } else {
+        liveMap.invalidateSize();
+      }
+
+      // Simulate ambulance movement
+      let step = 0;
+      const path = [
+        [6.3325, 5.6226],
+        [6.3315, 5.6215],
+        [6.3305, 5.6205],
+        [6.3300, 5.6200] // user location
+      ];
+
+      const movement = setInterval(() => {
+        if (!document.getElementById('screen-8').classList.contains('active')) {
+          clearInterval(movement);
+          return;
+        }
+        if (step < path.length) {
+          ambulanceMarker.setLatLng(path[step]);
+          step++;
+        } else {
+          clearInterval(movement);
+        }
+      }, 3000);
+    }, 200);
+  }
+</script>
+
+</body>
 </html>

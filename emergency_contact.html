@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emergency Contacts</title>
+  <link rel="stylesheet" href="emergency_contact.css">
+  <!-- Google Fonts for that clean Figma look -->
+  <link href="https://googleapis.com" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="top-nav">
+        <button class="back-btn" onclick="window.history.back()">←</button>
+        <h1>Emergency Contacts</h1>
+      </div>
+      <p class="subtitle">Add trusted contacts who can respond quickly in case of an emergency. They’ll receive your alert and real-time location.</p>
+    </header>
+
+    <section class="contacts">
+      <!-- Primary Contact Card -->
+      <div class="contact-card primary">
+        <div class="contact-info">
+          <h2>Robert Lawson</h2>
+          <span class="tag">Spouse • Primary contact</span>
+          <p class="detail"><span>📞</span> +234 812 345 6781</p>
+          <p class="detail"><span>✉️</span> roberta@email.com</p>
+        </div>
+        <div class="actions">
+          <button class="btn-action call" onclick="makeCall('+2348123456781')">Call</button>
+          <button class="btn-action message" onclick="sendSms('+2348123456781')">Message</button>
+        </div>
+      </div>
+
+      <div class="contact-card">
+        <div class="contact-info">
+          <h2>Albert Chuku</h2>
+          <span class="tag">Brother</span>
+          <p class="detail"><span>📞</span> +234 812 272 6781</p>
+        </div>
+        <div class="actions">
+          <button class="btn-action call" onclick="makeCall('+2348122726781')">Call</button>
+          <button class="btn-action message" onclick="sendSms('+2348122726781')">Message</button>
+        </div>
+      </div>
+
+      <div class="contact-card">
+        <div class="contact-info">
+          <h2>Simi Balogun</h2>
+          <span class="tag">Friend</span>
+          <p class="detail"><span>📞</span> +234 812 345 9654</p>
+        </div>
+        <div class="actions">
+          <button class="btn-action call" onclick="makeCall('+2348123459654')">Call</button>
+          <button class="btn-action message" onclick="sendSms('+2348123459654')">Message</button>
+        </div>
+      </div>
+    </section>
+
+    <div class="bottom-controls">
+      <button class="add-contact" onclick="toggleModal(true)">+ Add Emergency Contact</button>
+      <button class="sos-btn" onclick="triggerSOS()">SOS</button>
+    </div>
+  </div>
+
+  <!-- Add Contact Modal -->
+  <div id="contactModal" class="modal-overlay">
+    <div class="modal-content">
+      <h2>Add New Contact</h2>
+      <input type="text" placeholder="Full Name" id="newName">
+      <input type="text" placeholder="Relationship (e.g. Sister)" id="newRole">
+      <input type="tel" placeholder="Phone Number" id="newPhone">
+      <div class="modal-actions">
+        <button class="cancel-btn" onclick="toggleModal(false)">Cancel</button>
+        <button class="save-btn" onclick="saveContact()">Save Contact</button>
+      </div>
+    </div>
+  </div>
+
+    <script>
+    function makeCall(number) {
+      if(number) window.location.href = `tel:${number}`;
+    }
+
+    function sendSms(number) {
+      if(number) window.location.href = `sms:${number}`;
+    }
+
+    function toggleModal(show) {
+      const modal = document.getElementById('contactModal');
+      modal.style.display = show ? 'flex' : 'none';
+      if(!show) { // Clear inputs on close
+        document.getElementById('newName').value = '';
+        document.getElementById('newRole').value = '';
+        document.getElementById('newPhone').value = '';
+      }
+    }
+
+    function saveContact() {
+      const name = document.getElementById('newName').value;
+      const role = document.getElementById('newRole').value;
+      const phone = document.getElementById('newPhone').value;
+
+      if (!name || !phone) {
+        alert("Please enter at least a name and phone number.");
+        return;
+      }
+
+      // Create new contact card HTML structure
+      const contactSection = document.querySelector('.contacts');
+      const newCard = document.createElement('div');
+      newCard.className = 'contact-card';
+      
+      newCard.innerHTML = `
+        <div class="contact-info">
+          <h2>${name}</h2>
+          <span class="tag">${role || 'Contact'}</span>
+          <p class="detail"><span>📞</span> ${phone}</p>
+        </div>
+        <div class="actions">
+          <button class="btn-action call" onclick="makeCall('${phone}')">Call</button>
+          <button class="btn-action message" onclick="sendSms('${phone}')">Message</button>
+        </div>
+      `;
+
+      // Add to list and close
+      contactSection.appendChild(newCard);
+      toggleModal(false);
+    }
+  </script>
+</body>
+</html>
