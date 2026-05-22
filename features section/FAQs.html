@@ -13,36 +13,29 @@
     <title>MediAlert</title>
   </head>
   <body>
-   <!-------------------------- NAVBAR---------------------- -->
+    <!-------------------------- NAVBAR---------------------- -->
 
-  <nav class="navbar">
-
-
+    <nav class="navbar">
       <div class="nav-logo">
         <div class="logo-icon">
           <span>
             <a href="home.html">
-              <img
-                src="assests/logo-icon.png"
-                alt=""
-                width="30px" /></a
+              <img src="assests/logo-icon.png" alt="" width="30px" /></a
           ></span>
           <h4>MediAlert</h4>
         </div>
       </div>
 
-<div class="nav-links">
-      
+      <div class="nav-links">
         <ul class="nav-links" id="nav-links">
           <li><a href="home.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="feature.html">Features</a></li>
-        <li><a href="FAQs.html">FAQs</a></li>
-        <li><a href="blog.html">Blogs</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-      </ul>
-
-</div>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="feature.html">Features</a></li>
+          <li><a href="FAQs.html">FAQs</a></li>
+          <li><a href="blog.html">Blogs</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
 
       <!-- The Hamburger Icon -->
       <div class="hamburger" id="hamburger">
@@ -50,15 +43,12 @@
         <span class="bar"></span>
         <span class="bar"></span>
       </div>
-     
+
       <div class="auth">
         <a href="#" class="login">Log in</a>
         <button class="btn">Sign Up</button>
       </div>
-
-      
     </nav>
-
 
     <!-- --------------------END OF NAVBAR-------------- -->
 
@@ -204,6 +194,44 @@
         </div>
       </div>
     </section>
-    <script src="feature.js"></script>
+
+    <!-- =============JAVASCIPRT FUNCTIONALITY---========= -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const faqRows = document.querySelectorAll(".faq-row");
+
+        const messageText = `Yes! Patients details are shared automatically when an emergency alert is triggered through MediAlert. The system securely sends available information, such as medical history, allergies and location to the hospital dashboard in real-time, allowing your team to assess and prepare before the patient arrives.`;
+
+        faqRows.forEach((row) => {
+          row.addEventListener("click", () => {
+            // Check if the message is already there
+            let answer = row.nextElementSibling;
+
+            if (answer && answer.classList.contains("faq-answer")) {
+              // If it exists, toggle visibility
+              if (answer.style.display === "block") {
+                answer.style.display = "none";
+                row.querySelector(".plus-icon").innerHTML = "&plus;";
+              } else {
+                answer.style.display = "block";
+                row.querySelector(".plus-icon").innerHTML = "&minus;";
+              }
+            } else {
+              // If it doesn't exist, create it and insert it
+              const newAnswer = document.createElement("div");
+              newAnswer.classList.add("faq-answer");
+              newAnswer.innerHTML = `<p style="padding: 15px; color: gray; line-height: 1.6;">${messageText}</p>`;
+
+              // Insert it right after the clicked row
+              row.parentNode.insertBefore(newAnswer, row.nextSibling);
+
+              // Set to block and change icon to minus
+              newAnswer.style.display = "block";
+              row.querySelector(".plus-icon").innerHTML = "&minus;";
+            }
+          });
+        });
+      });
+    </script>
   </body>
 </html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="da.css">
+      <title>Document</title>
+</head>
+<body>
+      <!-- Dashboard Grid: Main Split -->
+<div class="dashboard-grid">
+    
+    <!-- Left Section: Recent Emergencies -->
+    <section class="recent-emergencies">
+        <div class="section-header">
+            <h3>Recent Completed Emergencies</h3>
+            <a href="#" class="view-all-link">View All</a>
+        </div>
+        <div class="emergency-list">
+            <!-- Your emergency-item rows here -->
+            <div class="emergency-item">
+                <div class="patient-meta">
+                    <img src="dashboard assets/profile-img.png" alt="Patient" class="p-avatar">
+                    <div class="p-info">
+                        <strong>Dominicia Faith</strong>
+                        <span>24 years, Female</span>
+                    </div>
+                </div>
+                <div class="incident-tag">Asthma</div>
+                <div class="status-date">
+                    <span class="status discharged">Discharged</span>
+                    <p>12 Apr, 2:40 PM</p>
+                </div>
+                <button class="btn-details">View Details</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Right Section: Side Panels -->
+    <aside class="right-panel">
+        <!-- Live Referred Cases Card -->
+        <div class="side-card">
+            <div class="side-card-header">
+                <h4>Live Referred Cases</h4>
+                <a href="#">View All</a>
+            </div>
+            <div class="live-cases-list">
+                <div class="live-case-item urgent">
+                    <div class="status-dot"></div>
+                    <div class="case-info">
+                        <strong>Case #1234 - Fire Accident</strong>
+                        <span>2 mins ago</span>
+                    </div>
+                </div>
+                <div class="live-case-item pending">
+                    <div class="status-dot"></div>
+                    <div class="case-info">
+                        <strong>Case #1235 - Asthma</strong>
+                        <span>5 mins ago</span>
+                    </div>
+                </div>
+                <!-- Repeat for all 6 column cards -->
+            </div>
+        </div>
+
+        <!-- Today's Report Card -->
+        <div class="side-card report-card">
+            <h4>Today's Report</h4>
+            <ul class="report-list">
+                <li class="report-item">
+                    <img src="dashboard assets/Oxygen.png" alt="icon">
+                    <p>The Oxygen Cylinder needs refill</p>
+                </li>
+                <li class="report-item critical">
+                    <img src="dashboard assets/Blood.png" alt="icon">
+                    <p>Blood Supply Low - High Severity</p>
+                </li>
+            </ul>
+        </div>
+    </aside>
+</div>
+
+</body>
+</html>

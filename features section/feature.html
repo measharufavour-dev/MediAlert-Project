@@ -9,34 +9,27 @@
   <body>
     <!-------------------------- NAVBAR---------------------- -->
 
-  <nav class="navbar">
-
-
+    <nav class="navbar">
       <div class="nav-logo">
         <div class="logo-icon">
           <span>
             <a href="home.html">
-              <img
-                src="assests/logo-icon.png"
-                alt=""
-                width="30px" /></a
+              <img src="assests/logo-icon.png" alt="" width="30px" /></a
           ></span>
           <h4>MediAlert</h4>
         </div>
       </div>
 
-<div class="nav-links">
-      
+      <div class="nav-links">
         <ul class="nav-links" id="nav-links">
           <li><a href="home.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="feature.html">Features</a></li>
-        <li><a href="FAQs.html">FAQs</a></li>
-        <li><a href="blog.html">Blogs</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-      </ul>
-
-</div>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="feature.html">Features</a></li>
+          <li><a href="FAQs.html">FAQs</a></li>
+          <li><a href="blog.html">Blogs</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
 
       <!-- The Hamburger Icon -->
       <div class="hamburger" id="hamburger">
@@ -44,15 +37,12 @@
         <span class="bar"></span>
         <span class="bar"></span>
       </div>
-     
+
       <div class="auth">
         <a href="#" class="login">Log in</a>
         <button class="btn">Sign Up</button>
       </div>
-
-      
     </nav>
-
 
     <!-- --------------------END OF NAVBAR-------------- -->
 
@@ -71,44 +61,504 @@
       </div>
     </section>
     <!-- --------------------- Section Page ------------------------ -->
-    <section class="box">
-      <div class="items">
-        <img src="assests/frame box.png" alt="" width="70px" />
-        <h2>Enable Faster Emergency Decisions</h2>
+    <section class="box-container">
+      <!-- Box 1: Enable Faster Decisions -->
+      <div class="card card-center">
+        <div class="icon-blue">
+          <img src="assests/1.png" alt="Flash Icon" />
+        </div>
+        <h3>Enable Faster Emergency Decisions</h3>
         <p>
           Leverage real-time alerts and critical patient data to make quick,
-          informed and respond to emergencies and respond to emergencies without
-          delay.
+          informed decisions and respond to emergencies without delay.
         </p>
       </div>
-      <div class="items-two">
-        <div class="high">
+
+      <!-- Box 2: Improve Efficiency (Arrows) -->
+      <div class="card card-split">
+        <div class="text-side">
           <p>
             Improve Response <br />
             Efficiency by
           </p>
-          <h2>4 <span>X</span></h2>
+          <h2 class="stat">4x</h2>
         </div>
-
-        <div class="vector-graphic">
-          <img src="assests/angle-vector1.png" alt="" />
+        <div class="image-side">
+          <img src="assests/angle-vector1.png" alt="Arrows" class="arrows" />
         </div>
       </div>
-      <!-- ...................END........... -->
-      <!-- ............START..... -->
-      <div class="items-three">
-        <div class="group-pic">
-          <img src="assests/Group pic..png" alt="" />
+
+      <!-- Box 3: Healthcare Professionals (Users) -->
+      <div class="card card-bottom-align">
+        <div class="user-avatars">
+          <img src="assests/Group pic..png" alt="Users" />
         </div>
-        <div class="items-3-text">
-          <h2>4.5 <span>X</span></h2>
+        <div class="text-right">
+          <h2 class="stat">4.5+</h2>
           <p>
             Thousands of healthcare professionals rely on MediAlert to manage
             emergency response and improve outcomes.
           </p>
         </div>
       </div>
+
+      <!-- Box 4: Flexible Solutions (Folder) -->
+      <div class="card card-split">
+        <div class="text-side">
+          <p>Flexible solutions designed to support hospitals of all sizes.</p>
+          <div class="small-icon">
+            <img src="assests/cylinder-vector.png" alt="Data icon" />
+          </div>
+        </div>
+        <div class="image-side folder-bg">
+          <img src="assests/Group 483555.png" alt="Folder" width="150px" />
+        </div>
+      </div>
     </section>
-    <script src="feature.js"></script>
+
+    <!-- =======================SECTION 2====================== -->
+    <section class="benefits">
+      <!-- Section Header -->
+      <div class="benefits-header">
+        <div class="number-con">
+          <div class="badge">1</div>
+          <span class="badge-label">Discover Benefits</span>
+        </div>
+
+        <h2>Unlock the Full Potential of Your Emergency Response System.</h2>
+        <p>
+          Discover how MediAlert empowers hospitals to respond faster, improve
+          coordination, and make smarter decisions with real-time alerts,
+          patient data, and seamless emergency management.
+        </p>
+      </div>
+
+      <!-- Benefits Cards Grid -->
+      <div class="benefits-grid">
+        <!-- Card 1 -->
+        <div class="benefit-card">
+          <div class="card-icon"><img src="assests/2.png" alt="" /></div>
+          <h4>Real-Time Emergency Alerts</h4>
+          <p>
+            Instantly receive verified emergency cases with patient details,
+            before arrival to the hospital.
+          </p>
+          <a href="#" class="view-more">View More</a>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="benefit-card">
+          <div class="card-icon"><img src="assests/3.png" alt="" /></div>
+          <h4>Patient's Information Access</h4>
+          <p>
+            View critical patient data before arrival to prepare your team for
+            immediate response.
+          </p>
+          <a href="#" class="view-more">View More</a>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="benefit-card">
+          <div class="card-icon"><img src="assests/4.png" alt="" /></div>
+          <h4>Patient's Location Tracking</h4>
+          <p>
+            Leverage real-time alerts and critical patient data to make quick,
+            informed and respond.
+          </p>
+          <a href="#" class="view-more">View More</a>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="benefit-card">
+          <div class="card-icon"><img src="assests/5.png" alt="" /></div>
+          <h4>Referral & Assistance System</h4>
+          <p>
+            Leverage real-time alerts and critical patient data to make quick,
+            informed and respond.
+          </p>
+          <a href="#" class="view-more">View More</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================== SECTION 3=============== -->
+    <section class="intelligence-section">
+      <div class="intelligence-container">
+        <!-- Left Side: Dashboard Visuals -->
+        <div class="intelligence-visual">
+          <!-- You can put your dashboard image clip here -->
+          <img
+            src="assests/em-vector.png"
+            alt="MediAlert Dashboard"
+            class="main-dashboard-img"
+          />
+        </div>
+
+        <!-- Right Side: Content -->
+        <div class="intelligence-content">
+          <div class="header-badge">
+            <span class="badge-num">2</span>
+            <span class="badge-text">Emergency Intelligence</span>
+          </div>
+
+          <h2 class="heading-2">
+            Make Faster Decisions with Real-Time Emergency Insights.
+          </h2>
+
+          <p>
+            MediAlert provides hospitals with real-time emergency data and
+            patients information, helping your team faster, more informed
+            decisions during critical situations.
+          </p>
+
+          <!-- Checklist -->
+          <ul class="intel-checklist">
+            <li>
+              <div class="check-icon">
+                <img src="assests/tick.png" alt="check" />
+              </div>
+              <div>
+                <strong>Real-Time Alert Analysis</strong>
+                <p>
+                  Instantly receive and assess emergency cases with complete
+                  visibility.
+                </p>
+              </div>
+            </li>
+            <li>
+              <div class="check-icon">
+                <img src="assests/tick.png" alt="check" />
+              </div>
+              <div>
+                <strong>Predictive Response Planning</strong>
+                <p>
+                  Anticipate incoming cases and prepare resources in advance.
+                </p>
+              </div>
+            </li>
+            <li>
+              <div class="check-icon">
+                <img src="assests/tick.png" alt="check" />
+              </div>
+              <div>
+                <strong>Smart Case Prioritization</strong>
+                <p>
+                  Identify high-priority emergencies and respond accordingly.
+                </p>
+              </div>
+            </li>
+          </ul>
+
+          <button class="btn-primary">See More ></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================ SECTION 4---------============= -->
+    <section class="overview-section">
+      <div class="overview-container">
+        <!-- Left Column: Text Content -->
+        <div class="overview-text">
+          <div class="header-badge">
+            <span class="badge-num">3</span>
+            <span class="badge-text">Emergency Overview</span>
+          </div>
+          <h2>Get A Complete Overview Of Your Emergency Operations.</h2>
+          <p>
+            Monitor all ongoing emergencies, ambulance activity and hospital
+            readiness from one centralized dashboard, ensuring nothing is
+            missed.
+          </p>
+          <button class="btn-primary">See More ></button>
+        </div>
+
+        <!-- Center Column: The Mobile Image -->
+        <div class="overview-image">
+          <!-- Your image clip of the hands/phone goes here -->
+          <img
+            src="assests/hand-vector.png"
+            alt="Mobile Overview"
+            class="phone-img"
+          />
+        </div>
+
+        <!-- Right Column: Floating Status Cards -->
+        <div class="overview-status-cards">
+          <div class="status-card">
+            <!-- <div class="status-icon blue-bg"> -->
+            <img src="assests/icon 6.png" alt="" />
+            <!-- </div> -->
+            <div class="status-info">
+              <strong>Emergency SOS Has Been Received</strong>
+              <p>
+                Instantly receive and assess emergency cases with complete
+                visibility.
+              </p>
+            </div>
+          </div>
+
+          <div class="move">
+            <div class="status-card mini">
+              <!-- <div class="status-icon light-blue-bg"> -->
+              <img src="assests/icon 7.png" alt="" />
+              <!-- </div> -->
+              <div class="status-info">
+                <strong>Help Is On The Way</strong>
+                <p>Instantly receive and assess...</p>
+              </div>
+            </div>
+
+            <div class="status-card mini smaller">
+              <!-- <div class="status-icon navy-bg"> -->
+              <img src="assests/icon 8.png" alt="" />
+              <!-- </div> -->
+              <div class="status-info">
+                <strong>Real-Time Alert</strong>
+                <p>Instantly receive and assess...</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ----============ SECTION 5============= -->
+
+    <section class="coordination-section">
+      <div class="coordination-container">
+        <!-- Left Column: Content -->
+        <div class="coordination-content">
+          <div class="header-badge">
+            <span class="badge-num">4</span>
+            <span class="badge-text">System Coordination</span>
+          </div>
+
+          <h2 class="heading-2">
+            Seamlessly Coordinate Emergency Response Across Systems.
+          </h2>
+
+          <p>
+            MediAlert integrates emergency alerts, ambulance tracking, and
+            hospital coordination into one unified platform, ensuring smooth
+            communication and faster response.
+          </p>
+
+          <ul class="coordination-list">
+            <li>
+              <img src="assests/tick.png" alt="check" class="list-icon" />
+              <div>
+                <strong>Centralized Emergency Data</strong>
+                <p>
+                  Instantly receive and assess emergency cases with complete
+                  visibility.
+                </p>
+              </div>
+            </li>
+            <li>
+              <img src="assests/tick.png" alt="check" class="list-icon" />
+              <div>
+                <strong>Real-Time Systems Sync</strong>
+                <p>
+                  Anticipate incoming cases and prepare resources in advance.
+                </p>
+              </div>
+            </li>
+            <li>
+              <img src="assests/tick.png" alt="check" class="list-icon" />
+              <div>
+                <strong>Automated Status Updates</strong>
+                <p>
+                  Identify high-priority emergencies and respond accordingly.
+                </p>
+              </div>
+            </li>
+          </ul>
+
+          <button class="btn-primary">See More ></button>
+        </div>
+
+        <!-- Right Column: Stacked Dashboard Images -->
+        <div class="coordination-visual">
+          <div class="image-stack">
+            <img src="assests/dashboard 2.png" alt="" class="img-front" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================== SECTION 6 -=================== -->
+
+    <!-- ================== SECTION 6 =================== -->
+    <!-- --------------------- SECTION 5: CASE MANAGEMENT ------------------------ -->
+    <section class="management-section">
+      <div class="management-container">
+        <!-- Header -->
+        <div class="management-header">
+          <div class="section-tag">
+            <span class="badge-num">5</span>
+            <span class="badge-text">Case Management</span>
+          </div>
+          <h2>Manage Emergency Cases Effectively.</h2>
+          <p >
+            Track, update, and manage emergency cases from arrival to discharge,
+            ensuring smooth handovers and accurate records.
+          </p>
+        </div>
+
+        <!-- The 2-Column Grid -->
+        <div class="management-grid">
+          <!-- Card 1 -->
+          <div class="management-card">
+            <div class="img-space">
+              <!-- YOUR IMAGE CLIP HERE -->
+              <img src="assests/Dashboard 3.png" alt="" />
+            </div>
+            <div class="mgmt-link">
+              <a href="#">Learn More &rarr;</a>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="management-card">
+            <div class="img-space">
+              <!-- YOUR IMAGE CLIP HERE -->
+              <img
+                src="assests/dashboard report.png
+          "
+                alt=""
+              />
+            </div>
+            <div class="mgmt-link">
+              <a href="#">Learn More &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================SECTION 7=============== -->
+    <!-- --------------------- FINAL CTA SECTION ------------------------ -->
+    <section class="app-cta-section">
+      <div class="app-cta-card">
+        <!-- Left: Content Side -->
+        <div class="cta-left-content">
+          <h2>Ready to Transform Your Response System?</h2>
+          <p>
+            Join hospitals using MediAlert to improve response time, enhance
+            coordination, and deliver better emergency care.
+          </p>
+
+          <div class="app-buttons">
+            <a href="#" class="store-btn">
+              <img src="assests/apple-fill-vec.png" alt="" width="20px" />
+              Get it on App Store
+            </a>
+            <a href="#" class="store-btn">
+              <img src="assests/playstore-vector.png" alt="" width="20px" />
+              Get it on Play Store
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Rocket Image Side -->
+        <div class="cta-right-visual">
+          <!-- SPACE FOR YOUR ROCKET IMAGE -->
+          <img src="assests/arrow-vector.png" alt="" class="rocket-img" />
+        </div>
+      </div>
+    </section>
+
+
+     
+    <!-- ----------------FOOTER SECTIONS----------------------- -->
+    <section class="footer">
+      <div class="hero-commet">
+        <div class="icon">
+          <img src="home assests/logo-icon.png" alt="logo" />
+          <h2>MediAlert</h2>
+        </div>
+        <h5>
+          MediAlert enables hospitals to receive, assess, and respond to
+          emergency cases in real time.
+        </h5>
+      </div>
+
+      <div class="links">
+        <div class="first">
+          <h4>Products</h4>
+          <ul>
+            <li>Features</li>
+            <li>Pricing</li>
+            <li>Testimonials</li>
+            <li>Reviews</li>
+            <li>Updates</li>
+          </ul>
+        </div>
+        <!-- ..................... -->
+        <div class="second">
+          <h4>Company</h4>
+          <ul>
+            <li>About</li>
+            <li>Contact Us</li>
+            <li>Career</li>
+            <li>Blog</li>
+          </ul>
+        </div>
+        <!-- ......................... -->
+        <div class="third">
+          <h4>Support</h4>
+          <ul>
+            <li>Get Started</li>
+            <li>Help Center</li>
+            <li>Server Status</li>
+            <li>Report a bug</li>
+            <li>Chat Services</li>
+          </ul>
+        </div>
+        <!-- ......................... -->
+        <div class="fourth">
+          <h4>Privacy Policy</h4>
+          <ul>
+            <li>Copyright</li>
+            <li>Terms of Service</li>
+          </ul>
+        </div>
+        <!-- ......................... -->
+        <!-- ......................... -->
+        <div class="fourth">
+          <h4>Subscribe to our newsletter</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam
+            mauris sed ma
+          </p>
+          <input type="text" placeholder="Enter Your Email" />
+          <div><button>Subscribe</button></div>
+        </div>
+        <!-- ......................... -->
+      </div>
+
+      <!-- footnotes -->
+      <div class="footnotes">
+        <div class="text">
+          <p>Copyright © 2026 MediAlert | All Rights Reserved</p>
+        </div>
+        <div class="links-social">
+          <ul>
+            <li><img src="assets/Facebook.png" alt="" width="10px" /></li>
+            <li><img src="assets/Twitter.png" alt="" width="15px" /></li>
+            <li><img src="assets/Instagram.png" alt="" width="15px" /></li>
+            <li><img src="assets/LinkedIn.png" alt="" width="15px" /></li>
+            <li>
+              <img src="assets/YouTube.png" alt="" width="15px" width="10px" />
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ----------------------- THE STYLES===================== -->
+    <script  >
+      
+    </script>
   </body>
 </html>

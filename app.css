@@ -1,0 +1,294 @@
+/* ── Reset ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0; padding: 0;
+}
+
+/* ── Tokens ── */
+:root {
+  --navy:          #1a3a6b;
+  --navy-dark:     #142f58;
+  --navy-btn:      #1e4db7;
+  --red:           #cc3333;
+  --red-light:     #fdeaea;
+  --red-border:    #e08080;
+  --ink:           #1a2b3c;
+  --muted:         #6b7a8d;
+  --bg:            #f5f7fa;
+  --white:         #ffffff;
+  --border:        #dde3ec;
+  --input-bg:      #f0f2f6;
+  --font:          'Inter', sans-serif;
+  --r-sm:          10px;
+  --r-md:          14px;
+  --r-pill:        50px;
+}
+
+html, body {
+  font-family: var(--font);
+  background: #e5e7eb;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ══════════════════════════════
+   SCREEN SYSTEM
+══════════════════════════════ */
+.screen { display: none; width: 100%; max-width: 390px; }
+.screen.active { display: flex; }
+
+/* ══════════════════════════════
+   PHONE FRAME
+══════════════════════════════ */
+.phone {
+  width: 100%;
+  min-height: 700px;
+  background: var(--bg);
+  border-radius: 1px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+
+/* ══════════════════════════════
+   SCREEN BODY
+══════════════════════════════ */
+.screen-body {
+  flex: 1;
+  padding: 20px 28px 40px;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg);
+}
+
+.screen-body--success {
+  justify-content: center;
+}
+
+/* ══════════════════════════════
+   BACK BUTTON
+══════════════════════════════ */
+.back-btn {
+  width: 36px; height: 36px;
+  border-radius: 10px;
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer;
+  margin-bottom: 24px;
+  flex-shrink: 0;
+  box-shadow: 0 1px 4px rgba(0,0,0,.06);
+  transition: background .18s;
+}
+.back-btn:hover { background: #eef2f8; }
+
+/* ══════════════════════════════
+   CONTENT BLOCK
+══════════════════════════════ */
+.content { display: flex; flex-direction: column; }
+
+.content--center { align-items: center; text-align: center; }
+
+.content__title {
+  font-size: 22px; font-weight: 700;
+  color: var(--navy); margin-bottom: 10px;
+  line-height: 1.25; letter-spacing: -.3px;
+}
+
+.content__sub {
+  font-size: 13px; color: var(--muted);
+  line-height: 1.65; margin-bottom: 36px;
+  max-width: 280px;
+}
+
+/* ══════════════════════════════
+   FIELD
+══════════════════════════════ */
+.field-group {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 32px;
+  text-align: left;
+}
+
+.field-label {
+  font-size: 13px; font-weight: 500;
+  color: var(--ink);
+}
+
+.field-input {
+  width: 100%; height: 56px;
+  padding: 0 16px;
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-radius: var(--r-md);
+  font-family: var(--font);
+  font-size: 15px; color: var(--ink);
+  outline: none;
+  transition: border-color .18s;
+}
+.field-input:focus { border-color: var(--navy-btn); }
+
+/* ══════════════════════════════
+   OTP INPUTS
+══════════════════════════════ */
+.otp-hint {
+  font-size: 13px; color: var(--muted);
+  margin-bottom: 16px;
+}
+
+.otp-row {
+  display: flex; gap: 14px;
+  justify-content: center;
+  margin-bottom: 14px;
+}
+
+.otp-box {
+  width: 62px; height: 62px;
+  border-radius: var(--r-md);
+  border: 1.5px solid var(--border);
+  background: #e8ecf2;
+  font-family: var(--font);
+  font-size: 22px; font-weight: 700;
+  color: var(--ink);
+  text-align: center;
+  outline: none;
+  caret-color: var(--navy-btn);
+  transition: border-color .18s, background .18s, box-shadow .18s;
+}
+
+.otp-box:focus {
+  border-color: var(--navy-btn);
+  background: var(--white);
+  box-shadow: 0 0 0 3px rgba(30,77,183,.12);
+}
+
+/* Error state */
+.otp-box--error {
+  border-color: var(--red-border);
+  background: var(--red-light);
+}
+
+.otp-box--error:focus {
+  border-color: var(--red);
+  box-shadow: 0 0 0 3px rgba(204,51,51,.10);
+}
+
+/* OTP error message */
+.otp-error {
+  font-size: 12px; color: var(--red);
+  text-align: center;
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+.otp-error.hidden { display: none; }
+
+/* Resend row */
+.resend-row {
+  font-size: 13px; color: var(--muted);
+  text-align: center; margin-top: 16px;
+}
+
+/* ══════════════════════════════
+   BUTTONS
+══════════════════════════════ */
+.btn-stack {
+  display: flex; flex-direction: column;
+  gap: 14px; width: 100%;
+}
+.btn-stack--mt { margin-top: 8px; }
+
+.btn {
+  width: 100%; height: 56px;
+  border-radius: var(--r-pill);
+  font-family: var(--font);
+  font-size: 16px; font-weight: 600;
+  cursor: pointer; border: none;
+  transition: all .2s ease;
+  display: flex; align-items: center; justify-content: center;
+}
+
+.btn--navy {
+  background: var(--navy);
+  color: var(--white);
+}
+.btn--navy:hover {
+  background: var(--navy-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(26,58,107,.28);
+}
+
+.btn--outline-navy {
+  background: var(--white);
+  color: var(--navy);
+  border: 1.5px solid var(--border);
+}
+.btn--outline-navy:hover {
+  border-color: var(--navy);
+  transform: translateY(-1px);
+}
+
+.btn--full { width: 100%; }
+
+/* ══════════════════════════════
+   INLINE LINK
+══════════════════════════════ */
+.inline-link {
+  background: transparent; border: none;
+  font-family: var(--font);
+  font-size: 13px; font-weight: 600;
+  color: var(--navy-btn);
+  cursor: pointer; padding: 0;
+  transition: opacity .18s;
+}
+.inline-link:hover { opacity: .7; }
+
+/* ══════════════════════════════
+   SUCCESS SCREEN
+══════════════════════════════ */
+.success-content {
+  display: flex; flex-direction: column;
+  align-items: center; gap: 14px;
+  padding: 0 8px;
+}
+
+.success-illustration {
+  margin-bottom: 16px;
+}
+
+.success__title {
+  font-size: 20px; font-weight: 700;
+  color: var(--navy);
+  text-align: center; line-height: 1.25;
+}
+
+.success__sub {
+  font-size: 13px; color: var(--muted);
+  text-align: center; line-height: 1.6;
+  margin-bottom: 8px;
+}
+
+/* ══════════════════════════════
+   RESPONSIVE
+══════════════════════════════ */
+@media (max-width: 450px) {
+  body { padding: 0; background: var(--bg); }
+
+  .screen { max-width: 100%; }
+
+  .phone {
+    border-radius: 0;
+    min-height: 100vh;
+    box-shadow: none;
+  }
+
+  .otp-box { width: 54px; height: 54px; font-size: 20px; }
+}

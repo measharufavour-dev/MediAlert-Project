@@ -1,0 +1,533 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forgot Password</title>
+    <link rel="stylesheet" href="app.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- ════════════════════════════
+       SCREEN 1 — FORGOT PASSWORD
+  ════════════════════════════ -->
+    <div class="screen active" id="s1">
+      <div class="phone">
+        <!-- Content -->
+        <div class="screen-body">
+          <button class="back-btn" onclick="goTo('s1', 's1')">
+            <svg width="10" height="18" viewBox="0 0 10 18" fill="none">
+              <path
+                d="M9 1L1 9l8 8"
+                stroke="#1a2b3c"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+
+          <div class="content content--center">
+            <h1 class="content__title">Forgot Password?</h1>
+            <p class="content__sub">
+              We'll send a one-time password (OTP) to verify it's you.
+            </p>
+
+            <div class="field-group">
+              <label class="field-label" for="s1Input">
+                Phone Number or Email
+              </label>
+              <input
+                type="text"
+                id="s1Input"
+                class="field-input"
+                placeholder=""
+                autocomplete="off"
+              />
+            </div>
+
+            <div class="btn-stack">
+              <button class="btn btn--navy" onclick="sendOtp()">
+                Send OTP
+              </button>
+              <button class="btn btn--outline-navy" onclick="cancelFlow()">
+                Cancel
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════
+       SCREEN 2 — ENTER OTP (default)
+  ════════════════════════════ -->
+    <div class="screen" id="s2">
+      <div class="phone">
+        <div class="status-bar">
+          <span class="status-bar__time">9:41</span>
+          <div class="status-bar__island"></div>
+          <div class="status-bar__icons">
+            <svg width="17" height="12" viewBox="0 0 17 12" fill="none">
+              <rect x="0" y="6" width="3" height="6" rx="1" fill="#000" />
+              <rect x="4" y="4" width="3" height="8" rx="1" fill="#000" />
+              <rect x="8" y="2" width="3" height="10" rx="1" fill="#000" />
+              <rect x="12" y="0" width="3" height="12" rx="1" fill="#000" />
+            </svg>
+            <svg width="16" height="12" viewBox="0 0 24 18" fill="none">
+              <path d="M12 14.5a1.5 1.5 0 110 3 1.5 1.5 0 010-3z" fill="#000" />
+              <path
+                d="M7.5 10.5a6.5 6.5 0 019 0"
+                stroke="#000"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+              <path
+                d="M4 7a11 11 0 0116 0"
+                stroke="#000"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+              <path
+                d="M1 3.5a15.5 15.5 0 0122 0"
+                stroke="#000"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+            </svg>
+            <svg width="25" height="12" viewBox="0 0 25 12" fill="none">
+              <rect
+                x="0.5"
+                y="0.5"
+                width="21"
+                height="11"
+                rx="3.5"
+                stroke="#000"
+                stroke-opacity="0.35"
+              />
+              <rect x="2" y="2" width="17" height="8" rx="2" fill="#000" />
+              <path d="M23 4v4a2 2 0 000-4z" fill="#000" fill-opacity="0.4" />
+            </svg>
+          </div>
+        </div>
+
+        <div class="screen-body">
+          <button class="back-btn" onclick="goTo('s2', 's1')">
+            <svg width="10" height="18" viewBox="0 0 10 18" fill="none">
+              <path
+                d="M9 1L1 9l8 8"
+                stroke="#1a2b3c"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+
+          <div class="content content--center">
+            <h1 class="content__title">Enter Verification Code</h1>
+            <p class="content__sub">
+              We've sent a code to +234 ••• ••• 1234.
+              <button class="inline-link" onclick="goTo('s2', 's1')">
+                Change?
+              </button>
+            </p>
+
+            <p class="otp-hint">Enter 4-digit code</p>
+
+            <div class="otp-row" id="otpRow2">
+              <input
+                class="otp-box"
+                type="text"
+                maxlength="1"
+                inputmode="numeric"
+                pattern="[0-9]*"
+                autocomplete="off"
+              />
+              <input
+                class="otp-box"
+                type="text"
+                maxlength="1"
+                inputmode="numeric"
+                pattern="[0-9]*"
+                autocomplete="off"
+              />
+              <input
+                class="otp-box"
+                type="text"
+                maxlength="1"
+                inputmode="numeric"
+                pattern="[0-9]*"
+                autocomplete="off"
+              />
+              <input
+                class="otp-box"
+                type="text"
+                maxlength="1"
+                inputmode="numeric"
+                pattern="[0-9]*"
+                autocomplete="off"
+              />
+            </div>
+
+            <!-- no error on this screen -->
+            <p class="otp-error hidden" id="otpErr2"></p>
+
+            <div class="btn-stack btn-stack--mt">
+              <button
+                class="btn btn--navy"
+                onclick="verifyOtp('s2', 'otpErr2')"
+              >
+                Verify Now
+              </button>
+            </div>
+
+            <p class="resend-row">
+              Didn't receive the code?
+              <button class="inline-link" onclick="resendCode()">Resend</button>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════
+       SCREEN 3 — OTP ERROR STATE
+  ════════════════════════════ -->
+    <div class="screen" id="s3">
+      <div class="phone">
+        <div class="status-bar">
+          <span class="status-bar__time">9:41</span>
+          <div class="status-bar__island"></div>
+          <div class="status-bar__icons">
+            <svg width="17" height="12" viewBox="0 0 17 12" fill="none">
+              <rect x="0" y="6" width="3" height="6" rx="1" fill="#000" />
+              <rect x="4" y="4" width="3" height="8" rx="1" fill="#000" />
+              <rect x="8" y="2" width="3" height="10" rx="1" fill="#000" />
+              <rect x="12" y="0" width="3" height="12" rx="1" fill="#000" />
+            </svg>
+            <svg width="16" height="12" viewBox="0 0 24 18" fill="none">
+              <path d="M12 14.5a1.5 1.5 0 110 3 1.5 1.5 0 010-3z" fill="#000" />
+              <path
+                d="M7.5 10.5a6.5 6.5 0 019 0"
+                stroke="#000"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+              <path
+                d="M4 7a11 11 0 0116 0"
+                stroke="#000"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+              <path
+                d="M1 3.5a15.5 15.5 0 0122 0"
+                stroke="#000"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+            </svg>
+            <svg width="25" height="12" viewBox="0 0 25 12" fill="none">
+              <rect
+                x="0.5"
+                y="0.5"
+                width="21"
+                height="11"
+                rx="3.5"
+                stroke="#000"
+                stroke-opacity="0.35"
+              />
+              <rect x="2" y="2" width="17" height="8" rx="2" fill="#000" />
+              <path d="M23 4v4a2 2 0 000-4z" fill="#000" fill-opacity="0.4" />
+            </svg>
+          </div>
+        </div>
+
+        <div class="screen-body">
+          <button class="back-btn" onclick="goTo('s3', 's2')">
+            <svg width="10" height="18" viewBox="0 0 10 18" fill="none">
+              <path
+                d="M9 1L1 9l8 8"
+                stroke="#1a2b3c"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+
+          <div class="content content--center">
+            <h1 class="content__title">Enter Verification Code</h1>
+            <p class="content__sub">
+              We've sent a code to +234 ••• ••• 1234.
+              <button class="inline-link" onclick="goTo('s3', 's1')">
+                Change?
+              </button>
+            </p>
+
+            <p class="otp-hint">Enter 4-digit code</p>
+
+            <div class="otp-row" id="otpRow3">
+              <input
+                class="otp-box otp-box--error"
+                type="text"
+                maxlength="1"
+                inputmode="numeric"
+                pattern="[0-9]*"
+                autocomplete="off"
+              />
+              <input
+                class="otp-box otp-box--error"
+                type="text"
+                maxlength="1"
+                inputmode="numeric"
+                pattern="[0-9]*"
+                autocomplete="off"
+              />
+              <input
+                class="otp-box otp-box--error"
+                type="text"
+                maxlength="1"
+                inputmode="numeric"
+                pattern="[0-9]*"
+                autocomplete="off"
+              />
+              <input
+                class="otp-box otp-box--error"
+                type="text"
+                maxlength="1"
+                inputmode="numeric"
+                pattern="[0-9]*"
+                autocomplete="off"
+              />
+            </div>
+
+            <p class="otp-error" id="otpErr3">
+              The code you entered is incorrect. Please try again.
+            </p>
+
+            <div class="btn-stack btn-stack--mt">
+              <button
+                class="btn btn--navy"
+                onclick="verifyOtp('s3', 'otpErr3')"
+              >
+                Verify Now
+              </button>
+            </div>
+
+            <p class="resend-row">
+              Didn't receive the code?
+              <button class="inline-link" onclick="resendCode()">Resend</button>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════
+       SCREEN 4 — SUCCESS
+  ════════════════════════════ -->
+    <div class="screen" id="s4">
+      <div class="phone">
+        <div class="status-bar">
+          <span class="status-bar__time">9:41</span>
+          <div class="status-bar__island"></div>
+          <div class="status-bar__icons">
+            <svg width="17" height="12" viewBox="0 0 17 12" fill="none">
+              <rect x="0" y="6" width="3" height="6" rx="1" fill="#000" />
+              <rect x="4" y="4" width="3" height="8" rx="1" fill="#000" />
+              <rect x="8" y="2" width="3" height="10" rx="1" fill="#000" />
+              <rect x="12" y="0" width="3" height="12" rx="1" fill="#000" />
+            </svg>
+            <svg width="16" height="12" viewBox="0 0 24 18" fill="none">
+              <path d="M12 14.5a1.5 1.5 0 110 3 1.5 1.5 0 010-3z" fill="#000" />
+              <path
+                d="M7.5 10.5a6.5 6.5 0 019 0"
+                stroke="#000"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+              <path
+                d="M4 7a11 11 0 0116 0"
+                stroke="#000"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+              <path
+                d="M1 3.5a15.5 15.5 0 0122 0"
+                stroke="#000"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+            </svg>
+            <svg width="25" height="12" viewBox="0 0 25 12" fill="none">
+              <rect
+                x="0.5"
+                y="0.5"
+                width="21"
+                height="11"
+                rx="3.5"
+                stroke="#000"
+                stroke-opacity="0.35"
+              />
+              <rect x="2" y="2" width="17" height="8" rx="2" fill="#000" />
+              <path d="M23 4v4a2 2 0 000-4z" fill="#000" fill-opacity="0.4" />
+            </svg>
+          </div>
+        </div>
+
+        <div class="screen-body screen-body--success">
+          <button class="back-btn" onclick="goTo('s4', 's1')">
+            <svg width="10" height="18" viewBox="0 0 10 18" fill="none">
+              <path
+                d="M9 1L1 9l8 8"
+                stroke="#1a2b3c"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+
+          <div class="success-content">
+            <!-- Illustration -->
+            <div class="success-illustration">
+              <svg
+                viewBox="0 0 220 200"
+                width="220"
+                height="200"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <!-- Phone body -->
+                <rect
+                  x="75"
+                  y="30"
+                  width="90"
+                  height="145"
+                  rx="12"
+                  fill="#1e4db7"
+                />
+                <!-- Screen -->
+                <rect
+                  x="83"
+                  y="44"
+                  width="74"
+                  height="100"
+                  rx="6"
+                  fill="#3a6fd8"
+                />
+                <!-- Lock icon on screen -->
+                <rect
+                  x="103"
+                  y="88"
+                  width="34"
+                  height="28"
+                  rx="4"
+                  fill="#fff"
+                  opacity=".9"
+                />
+                <path
+                  d="M110 88 v-8 a10 10 0 0120 0 v8"
+                  stroke="#fff"
+                  stroke-width="3.5"
+                  stroke-linecap="round"
+                  fill="none"
+                />
+                <circle cx="120" cy="103" r="4" fill="#1e4db7" />
+                <!-- Profile icon -->
+                <circle cx="120" cy="62" r="8" fill="#fff" opacity=".8" />
+                <path
+                  d="M108 80 c0-7 24-7 24 0"
+                  stroke="#fff"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  fill="none"
+                  opacity=".8"
+                />
+                <!-- Blue shield -->
+                <path
+                  d="M155 90 l22 0 l0 22
+                c0 12-11 20-22 24
+                c-11-4-22-12-22-24 l0-22 Z"
+                  fill="#1e4db7"
+                  stroke="#fff"
+                  stroke-width="1.5"
+                />
+                <!-- Check in shield -->
+                <path
+                  d="M148 103 l6 6 l12-12"
+                  stroke="#fff"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  fill="none"
+                />
+                <!-- Person standing -->
+                <circle cx="58" cy="90" r="10" fill="#f4a97f" />
+                <path d="M46 160 c0-22 24-22 24 0" fill="#1e4db7" />
+                <line
+                  x1="58"
+                  y1="100"
+                  x2="58"
+                  y2="135"
+                  stroke="#1e4db7"
+                  stroke-width="5"
+                  stroke-linecap="round"
+                />
+                <!-- Arm pointing -->
+                <path
+                  d="M58 115 L82 105"
+                  stroke="#f4a97f"
+                  stroke-width="4.5"
+                  stroke-linecap="round"
+                />
+                <!-- Clouds -->
+                <ellipse
+                  cx="48"
+                  cy="52"
+                  rx="16"
+                  ry="10"
+                  fill="#b3cdf5"
+                  opacity=".7"
+                />
+                <ellipse
+                  cx="62"
+                  cy="48"
+                  rx="12"
+                  ry="8"
+                  fill="#c8dcf7"
+                  opacity=".7"
+                />
+                <ellipse
+                  cx="170"
+                  cy="40"
+                  rx="14"
+                  ry="9"
+                  fill="#b3cdf5"
+                  opacity=".6"
+                />
+              </svg>
+            </div>
+
+            <h1 class="success__title">Password Reset Successful</h1>
+            <p class="success__sub">
+              You can now log in with your new password.
+            </p>
+
+            <button
+              class="btn btn--outline-navy btn--full"
+              onclick="goTo('s4', 's1')"
+            >
+              Log in
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

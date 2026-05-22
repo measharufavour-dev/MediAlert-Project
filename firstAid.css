@@ -1,0 +1,372 @@
+/* -------------- */
+/* --- Global Styles --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f8f9fa;
+  padding: 20px;
+  max-width: 450px; /* Mobile width */
+  margin: 0 auto;
+}
+
+/* --- Header & Search Bar --- */
+header h1 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  font-weight: 700;
+  padding: 0.2rem;
+  color: #023f7d;
+}
+
+header button {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  background: white;
+  color: #888;
+  cursor: pointer;
+}
+
+/* ---  The Hero Section  --- */
+.parent-container {
+  background-color: #e8f0fe;
+  border-radius: 15px;
+  padding: 20px;
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.text h2 {
+  font-size: 18px;
+  color: #1a73e8;
+  margin-bottom: 8px;
+}
+
+.text p {
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 12px;
+}
+
+.text button {
+  background-color: #1a73e8;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.img img {
+  width: 200px;
+}
+
+/* --- Section Titles --- */
+h3 {
+  font-size: 14px;
+  color: #777;
+  margin: 25px 0 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* --- Common Emergencies (List Items) --- */
+.child {
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.child-img {
+  margin-right: 15px;
+}
+
+.child-img img {
+  width: 35px;
+  height: 35px;
+}
+
+.child-text {
+  flex-grow: 1;
+}
+
+.child-text h4 {
+  font-size: 16px;
+  color: #023f7d;
+}
+
+.child-text p {
+  font-size: 12px;
+  color: #888;
+}
+
+.arrow img {
+  width: 25px;
+  /* opacity: 0.1; */
+}
+
+/* --- Quick Access  --- */
+.parent-quick-access-con {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 100px;
+}
+
+.child-img-small {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 10px 12px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  gap: 0.3rem;
+  align-items: center;
+  width: 12vw;
+}
+
+/* Hover/Selection effect */
+.child-img-small:hover {
+  border-color: #004696;
+  background-color: #f8fbff;
+}
+
+.child-img-small h4 {
+  font-size: 13px;
+  color: #023f7d;
+  font-weight: 500;
+}
+
+.child-img-small img {
+  width: 50px;
+  padding-left: 0.1rem;
+}
+
+.child-img-small h4 {
+  font-size: 14px;
+  color: #023f7d;
+  font-weight: 700;
+  padding: 0.2rem;
+}
+*/
+
+/* ------------ */
+.footer{
+  position: relative;
+}
+/* --- Browse All Button --- */
+.btn {
+  text-align: center;
+}
+
+.btn button {
+  background: white;
+  border: 1px solid #ddd;
+  padding: 15px 35px;
+  width: 40vw;
+  border-radius: 15px;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+  color: #555;
+
+  cursor: pointer;
+  text-decoration: none;
+  margin-bottom: 3rem;
+}
+button a {
+  text-decoration: none;
+  color: #555;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.btn img {
+  width: 25px;
+}
+/* ==================================================== */
+
+.sos-wrapper {
+  position: relative;
+  width: 150px;   
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 6rem auto;
+  /* background-color: white; */
+}
+
+.sos-button {
+  position: relative;
+  z-index: 2;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.progress-ring {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 50%;
+  transform: rotate(-90deg); /* Start at the top */
+  z-index: 1;
+  border-radius: 50%;
+}
+
+.ring-bg {
+  fill: none;
+  stroke: #f3f3f3; /* Light gray background track */
+  stroke-width: 6;
+  border-radius: 50%;
+}
+
+#progress-bar {
+  fill: none;
+  stroke: #ff3b30;
+  stroke-width: 6;
+  stroke-linecap: round;
+  stroke-dasharray: 283;
+  stroke-dashoffset: 283;
+  transition: stroke-dashoffset 3s linear;
+}
+
+.holding #progress-bar {
+  stroke-dashoffset: 0;
+}
+.sos-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  margin-top: 2rem;
+  position: absolute;
+  top: 137%;
+  left: 60%;
+}
+.sos-container p {
+  color: gray;
+}
+.sos-button {
+  border: none;
+  padding-top: 1.5rem;
+  padding-bottom: 3rem;
+}
+
+/* =============================================================== */
+
+
+/* --- Media Queries for Mobile Responsiveness --- */
+
+/* 1. Large Mobile / Small Tablets (400px - 480px) */
+@media screen and (max-width: 480px) {
+  body {
+    margin: 1rem;
+    padding: 15px;
+    max-width: 100%;
+  }
+
+  .img img {
+    width: 150px;  
+  }
+
+  .child-img-small {
+    width: auto; 
+    flex-direction: column; 
+    padding: 10px 5px;
+  }
+  .sos-container {
+  top: 90%;
+  left: 60%;
+}
+}
+
+/* 2. Standard Mobile (360px - 399px) */
+@media screen and (max-width: 399px) {
+  header h1 {
+    font-size: 22px;
+  }
+
+  .parent-container {
+    padding: 15px;
+    gap: 8px;
+  }
+
+  .img img {
+    width: 120px;  
+  }
+    .child-img-small{
+      display: flex;
+      flex-direction: row;
+    }
+  .child-img-small img {
+  width: 30px;
+  padding-left: 0.1rem;
+}
+
+  .child-img-small h4 {
+    font-size: 11px;
+  }
+
+  .btn button {
+    margin-left: 1.2rem;
+    width: 80vw; 
+  }
+}
+
+/* 3. Small Mobile Devices (iPhone SE, etc.) (Below 360px) */
+@media screen and (max-width: 350px) {
+  .img img {
+    display: none;  
+  }
+
+  .parent-quick-access-con {
+    grid-template-columns: 1fr 1fr;  
+    gap: 8px;
+  }
+
+  .child-text h4 {
+    font-size: 14px;
+  }
+
+  .sos-wrapper {
+    transform: scale(0.8);  
+    margin: 3rem auto;
+  }
+}
+
+ 
+@media screen and (max-width: 450px) {
+  body {
+    padding-bottom: env(safe-area-inset-bottom);
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+  }
+}

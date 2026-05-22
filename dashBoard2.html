@@ -1,0 +1,499 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="dashBoard.css" />
+    <title>MediAlert Dashboard</title>
+  </head>
+  <body>
+    <!-- Top Header -->
+    <header class="top-header">
+      <div class="header-left">
+        <div class="logo-area">
+          <div class="logo-box">
+            <img
+              src="dashboard assets/Frame 1686551770.png"
+              alt=""
+              width="15px"
+            />
+          </div>
+          <span class="app-name">MediAlert</span>
+        </div>
+        <div class="v-divider"></div>
+        <h1 class="nav-title">Dashboard</h1>
+      </div>
+
+      <div class="header-right">
+        <div class="search-container">
+          <input type="text" placeholder="Search..." />
+        </div>
+        <div class="notif-bell">
+          <img src="dashboard assets/Bell.png" alt="" />
+        </div>
+        <div class="user-info">
+          <img src="dashboard assets/img.png" alt="" />
+          <span class="user-name">Dr. Smith</span>
+          <div class="user-avatar">MS</div>
+        </div>
+      </div>
+    </header>
+
+    <div class="layout-body">
+      <!-- Aside Bar (6 Links) -->
+      <aside class="sidebar">
+        <nav>
+          <div>
+            <img src="dashboard assets/Widget 5.png" alt="" /><a
+              href="#"
+              class="active"
+              >Dashboard</a
+            >
+          </div>
+          <div>
+            <img src="dashboard assets/Vector.png" alt="" />
+            <a href="#">Patient Registry</a>
+          </div>
+          <div>
+            <img src="dashboard assets/side nav 3.png" alt="" />
+            <a href="#">Emergency Cases</a>
+          </div>
+          <div>
+            <img src="dashboard assets/side nav 4.png" alt="" />
+            <a href="#">Referred Cases</a>
+          </div>
+          <div>
+            <img src="dashboard assets/Tuning.png" alt="" />
+            <a href="#">Medical Reports</a>
+          </div>
+          <div>
+            <img src="dashboard assets/side nav 5.png" alt="" />
+            <a href="#">Settings</a>
+          </div>
+        </nav>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="content">
+        <section class="welcome-header">
+          <div class="welcome-text">
+            <h2>Hello, Smith</h2>
+            <p>Welcome back to your dashboard</p>
+          </div>
+          <button class="btn-view-all">View All Referred Cases</button>
+        </section>
+
+        <!-- 3 Stats Cards -->
+        <div class="stats-row">
+          <div class="stat-card">
+            <div>
+              <p>Total Emergencies</p>
+              <div class="rate">
+                <h3>106</h3>
+                <img
+                  src="dashboard assets/icon+caption.png"
+                  alt=""
+                  width="50px"
+                />
+              </div>
+            </div>
+            <div><img src="dashboard assets/icon card 1.png" alt="" /></div>
+          </div>
+          <div class="stat-card">
+            <div>
+              <p>Ongoing Cases</p>
+              <div class="rate">
+                <h3>10</h3>
+                <img
+                  src="dashboard assets/icon+caption.png"
+                  alt=""
+                  width="50px"
+                />
+              </div>
+            </div>
+            <div><img src="dashboard assets/icon card (1).png" alt="" /></div>
+          </div>
+          <div class="stat-card">
+            <div>
+              <p>Resolved Cases</p>
+              <div class="rate">
+                <h3>10</h3>
+                <img
+                  src="dashboard assets/icon+caption.png"
+                  alt=""
+                  width="50px"
+                />
+              </div>
+            </div>
+            <div><img src="dashboard assets/icon card.png" alt="" /></div>
+          </div>
+        </div>
+
+        <!-- Dashboard Grid -->
+        <div class="dashboard-grid">
+          <!-- Center Section: Recent Emergencies -->
+          <section class="recent-emergencies">
+            <h3>Recent Completed Emergencies</h3>
+            <div class="emergency-list">
+              <!-- Example Row -->
+              <div class="emergency-item">
+                <div class="patient-meta">
+                  <div class="p-icon">
+                    <img src="dashboard assets/profile-img.png" alt="" />
+                  </div>
+                  <div>
+                    <strong> Dominicia Faith</strong> <br />
+                    <small>24 years, Female</small>
+                  </div>
+                </div>
+                <div class="incident">Asthma</div>
+                <div class="timestamp">
+                  <div>Discharged</div>
+                  <p>12 Apr, 2:40 PM</p>
+                </div>
+                <button class="btn-details">View Details</button>
+              </div>
+              <!-- ============================ -->
+              <div class="emergency-item">
+                <div class="patient-meta">
+                  <div class="p-icon">
+                    <img src="dashboard assets/profile-img.png" alt="" />
+                  </div>
+                  <div>
+                    <strong>Dominicia Faith</strong> <br />
+                    <small>24 years, Female</small>
+                  </div>
+                </div>
+                <div class="incident">Asthma</div>
+                <div class="timestamp">
+                  <div>Referred</div>
+                  <p>12 Apr, 2:40 PM</p>
+                </div>
+                <button class="btn-details">View Details</button>
+              </div>
+              <!-- ================ -->
+              <div class="emergency-item">
+                <div class="patient-meta">
+                  <div class="p-icon">
+                    <img src="dashboard assets/profile-img.png" alt="" />
+                  </div>
+                  <div>
+                    <strong>Dominicia Faith</strong> <br />
+                    <small>24 years, Female</small>
+                  </div>
+                </div>
+                <div class="incident">Asthma</div>
+                <div class="timestamp">
+                  <div>Admitted</div>
+                  <p>12 Apr, 2:40 PM</p>
+                </div>
+                <button class="btn-details">View Details</button>
+              </div>
+              <!-- Example Row -->
+              <div class="emergency-item">
+                <div class="patient-meta">
+                  <div class="p-icon">
+                    <img src="dashboard assets/profile-img.png" alt="" />
+                  </div>
+                  <div>
+                    <strong> Dominicia Faith</strong> <br />
+                    <small>24 years, Female</small>
+                  </div>
+                </div>
+                <div class="incident">Asthma</div>
+                <div class="timestamp">
+                  <div>Discharged</div>
+                  <p>12 Apr, 2:40 PM</p>
+                </div>
+                <button class="btn-details">View Details</button>
+              </div>
+              <!-- ============================ -->
+              <div class="emergency-item">
+                <div class="patient-meta">
+                  <div class="p-icon">
+                    <img src="dashboard assets/profile-img.png" alt="" />
+                  </div>
+                  <div>
+                    <strong>Dominicia Faith</strong> <br />
+                    <small>24 years, Female</small>
+                  </div>
+                </div>
+                <div class="incident">Asthma</div>
+                <div class="timestamp">
+                  <div>Referred</div>
+                  <p>12 Apr, 2:40 PM</p>
+                </div>
+                <button class="btn-details">View Details</button>
+              </div>
+              <!-- ================ -->
+              <div class="emergency-item">
+                <div class="patient-meta">
+                  <div class="p-icon">
+                    <img src="dashboard assets/profile-img.png" alt="" />
+                  </div>
+                  <div>
+                    <strong>Dominicia Faith</strong> <br />
+                    <small>24 years, Female</small>
+                  </div>
+                </div>
+                <div class="incident">Asthma</div>
+                <div class="timestamp">
+                  <div>Admitted</div>
+                  <p>12 Apr, 2:40 PM</p>
+                </div>
+                <button class="btn-details">View Details</button>
+              </div>
+              <!-- Repeat 4-5 times as per design -->
+            </div>
+            <!-- ================================== -->
+            <div class="emergency-item">
+              <div class="patient-meta">
+                <div class="p-icon">
+                  <img src="dashboard assets/profile-img.png" alt="" />
+                </div>
+                <div>
+                  <strong>Dominicia Faith</strong> <br />
+                  <small>24 years, Female</small>
+                </div>
+              </div>
+              <div class="incident">Asthma</div>
+              <div class="timestamp">
+                <div>Referred</div>
+                <p>12 Apr, 2:40 PM</p>
+              </div>
+              <button class="btn-details">View Details</button>
+            </div>
+            <!-- =============================== -->
+            <div class="emergency-item">
+              <div class="patient-meta">
+                <div class="p-icon">
+                  <img src="dashboard assets/profile-img.png" alt="" />
+                </div>
+                <div>
+                  <strong>Dominicia Faith</strong> <br />
+                  <small>24 years, Female</small>
+                </div>
+              </div>
+              <div class="incident">Asthma</div>
+              <div class="timestamp">
+                <div>Referred</div>
+                <p>12 Apr, 2:40 PM</p>
+              </div>
+              <button class="btn-details">View Details</button>
+            </div>
+            <!-- ----========================== -->
+            <div class="emergency-item">
+              <div class="patient-meta">
+                <div class="p-icon">
+                  <img src="dashboard assets/profile-img.png" alt="" />
+                </div>
+                <div>
+                  <strong>Dominicia Faith</strong> <br />
+                  <small>24 years, Female</small>
+                </div>
+              </div>
+              <div class="incident">Asthma</div>
+              <div class="timestamp">
+                <div>Referred</div>
+                <p>12 Apr, 2:40 PM</p>
+              </div>
+              <button class="btn-details">View Details</button>
+            </div>
+          </section>
+          <!-- ================================================================================= -->
+          <!-- Right Section: Live & Today's Report -->
+          <aside class="right-panel">
+            <section>
+              <div class="panel-section">
+                <h4 class="live-h4">Live Referred Cases</h4>
+
+                <div class="panel-card">
+                  <div class="cardy">
+                    <div class="img">
+                      <img
+                        src="dashboard assets/orange.png"
+                        alt=""
+                        width="10px"
+                      />
+                    </div>
+                    <div class="live-card-urgent">
+                      <div class="text">
+                        <h3>Steve Collins - Fire Accident</h3>
+                        <p>To: General Hospital</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="time"><p>Few minutes ago</p></div>
+                </div>
+                <!-- ============================= -->
+                <div class="panel-card">
+                  <div class="cardy">
+                    <div class="img">
+                      <img src="dashboard assets/red.png" alt="" width="10px" />
+                    </div>
+                    <div class="live-card-urgent">
+                      <div class="text">
+                        <h3>Steve Collins - Fire Accident</h3>
+                        <p>To: General Hospital</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="time"><p>Few minutes ago</p></div>
+                </div>
+                <!-- ============================= -->
+                <div class="panel-card">
+                  <div class="cardy">
+                    <div class="img">
+                      <img
+                        src="dashboard assets/green.png"
+                        alt=""
+                        width="10px"
+                      />
+                    </div>
+                    <div class="live-card-urgent">
+                      <div class="text">
+                        <h3>Steve Collins - Fire Accident</h3>
+                        <p>To: General Hospital</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="time"><p>Few minutes ago</p></div>
+                </div>
+
+                <!-- ============================= -->
+                <div class="panel-card">
+                  <div class="cardy">
+                    <div class="img">
+                      <img
+                        src="dashboard assets/orange.png"
+                        alt=""
+                        width="10px"
+                      />
+                    </div>
+                    <div class="live-card-urgent">
+                      <div class="text">
+                        <h3>Steve Collins - Fire Accident</h3>
+                        <p>To: General Hospital</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="time"><p>Few minutes ago</p></div>
+                </div>
+                <!-- ================================= -->
+
+                <div class="panel-card">
+                  <div class="cardy">
+                    <div class="img">
+                      <img
+                        src="dashboard assets/orange.png"
+                        alt=""
+                        width="10px"
+                      />
+                    </div>
+                    <div class="live-card-urgent">
+                      <div class="text">
+                        <h3>Steve Collins - Fire Accident</h3>
+                        <p>To: General Hospital</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="time"><p>Few minutes ago</p></div>
+                </div>
+
+                <!-- --------------=================== -->
+                <!-- ///////////////////////////////////////// -->
+              </div>
+            </section>
+
+            <div class="panel-section">
+              <h4>Today's Report</h4>
+              <div class="report-list">
+                <!-- ========================= -->
+                <div class="list">
+                  <div>
+                    <img
+                      src="dashboard assets/material-symbols_emergency-home-outline.png"
+                      alt=""
+                    />
+                  </div>
+                  <div>
+                    <h4>The Oxygen Cylinder needs immediate refill</h4>
+                    <p>Few minutes ago</p>
+                  </div>
+                </div>
+                <!-- --=================================== -->
+                <div class="list">
+                  <div>
+                    <img
+                      src="dashboard assets/material-symbols_emergency-home-outline.png"
+                      alt=""
+                    />
+                  </div>
+                  <div>
+                    <h4>Blood Supply Low - High Severity</h4>
+                    <p>40 minutes ago</p>
+                  </div>
+                </div>
+                <!-- ==================================== -->
+                <div class="list">
+                  <div>
+                    <img
+                      src="dashboard assets/material-symbols_emergency-home-outline.png"
+                      alt=""
+                    />
+                  </div>
+                  <div>
+                    <h4>Incoming referral from City Clinic Benin</h4>
+                    <p>Few minutes ago</p>
+                  </div>
+                </div>
+                <!-- ================================= -->
+
+                <div class="list">
+                  <div>
+                    <img
+                      src="dashboard assets/material-symbols_emergency-home-outline.png"
+                      alt=""
+                    />
+                  </div>
+                  <div>
+                    <h4>Specialist requsted - Neurologist</h4>
+                    <p>Few minutes ago</p>
+                  </div>
+                </div>
+                <!-- ============================ -->
+
+                <div class="list">
+                  <div>
+                    <img
+                      src="dashboard assets/material-symbols_emergency-home-outline.png"
+                      alt=""
+                    />
+                  </div>
+                  <div>
+                    <h4>Emergency room at full capacity</h4>
+                    <p>55 minutes ago</p>
+                  </div>
+                </div>
+
+                <!-- ========================== -->
+
+                <div class="list">
+                  <div>
+                    <img
+                      src="dashboard assets/material-symbols_emergency-home-outline.png"
+                      alt=""
+                    />
+                  </div>
+                  <div>
+                    <h4>ICU beds nearing full capacity</h4>
+                    <p>1 hour ago.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
